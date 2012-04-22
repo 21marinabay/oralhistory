@@ -1,0 +1,86 @@
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+
+<channel>
+
+<title>Some Bands I Like</title>
+
+<link>http://www.andyvolk.com/webmonkey/bands/</link>
+
+
+
+<description>A list of some bands I like
+
+(or have been a member of).</description>
+
+
+
+<item>
+
+
+
+<title>Rocking Webmonkey Garage Band</title>
+
+<link>http://www.webmonkey.com/ourband.html</link>
+
+<description>The best ever garage band on the Internet.</description>
+
+
+
+<guid isPermaLink="false"> http://www.webmonkey.com/ourband.html</guid>
+
+
+
+<media:content url="http://www.webmonkey.com/monkeyrock.mpg"
+
+fileSize="2471632" type="video/mpeg" height="240" width="320"
+
+duration="147" medium="video" isDefault="true">
+
+<media:title>The Webmonkey Band "Monkey Rock"</media:title>
+
+<media:description>See Rocking Webmonkey Garage Band playing our
+
+classic song "Monkey Rock" to a sold-out audience at the Fillmore
+
+Auditorium.</media:description>
+
+<media:thumbnail url="
+
+http://www.webmonkey.com/images/monkeyrock-thumb.jpg"
+
+height="98" width="145"/>
+
+
+
+</media:content>
+
+
+
+<media:content duration="180" medium="video" isDefault="true">
+
+<media:title>The Webmonkey Band - Fan Snippets</media:title>
+
+<media:description>Some cool video uploaded by our fans
+
+from a show at Bottom of the Hill.</media:description>
+
+<media:player url="http://www.somevideouploadsite/webmonkey.html" />
+
+<media:thumbnail url="http://www.webmonkey.com/images/both-thumb.jpg"
+
+height="98" width="145"/>
+
+
+
+</media:content>
+
+
+
+</item>
+
+
+
+</channel>
+
+</rss>
+

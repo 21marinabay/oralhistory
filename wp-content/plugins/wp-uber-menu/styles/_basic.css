@@ -1,0 +1,660 @@
+/* Reset */
+#megaMenu div, #megaMenu span, #megaMenu ul, #megaMenu li, #megaMenu a{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+/**** ALL ****/
+#megaMenu{
+	position:relative;
+	line-height:1em;
+	overflow:visible;
+	zoom:1;
+	display:block;
+}
+#megaMenu ul {		/* All UL */
+	list-style:none outside none;
+	margin:0px;
+	padding:0px;
+	font-family:Arial, sans-serif;
+	position:relative;
+	overflow:visible;
+	zoom:1;
+}
+#megaMenu ul.megaMenu li{
+	margin-bottom:0px;
+	list-style-type: none;
+	list-style-image: none;
+	border:none;
+	text-align:left;
+}
+#megaMenu ul.megaMenu li a{
+	line-height:1.2em;
+	text-decoration:none;
+}
+/**** TOP LEVEL ****/
+
+#megaMenu ul.megaMenu{
+	float:left;
+	z-index:100;
+}
+#megaMenu.megaMenuHorizontal ul.megaMenu{
+	width:100%;
+}
+#megaMenu ul.megaMenu > li{
+	float:left;
+	position:relative;
+	display:block;
+	/*line-height:1em;*/
+	padding:0px 0px;
+	margin:0px;
+	z-index:200;
+	zoom:1;
+}
+#megaMenu ul.megaMenu > li > a{
+	display:block;
+	padding:.7em 10px;
+	
+	position:relative;
+	z-index:400;
+	zoom:1;
+	
+	border-width:1px 1px 1px 1px;	/* No Bouncing */
+	border-style:solid;
+	border-color:transparent;
+}
+#megaMenu ul.megaMenu > li:hover,
+#megaMenu ul.megaMenu > li.megaHover,
+#megaMenu ul.megaMenu > li:hover > a,
+#megaMenu ul.megaMenu > li.megaHover > a{
+	z-index:600;
+}
+
+
+/**** DROP LEVEL ****/
+
+#megaMenu ul ul.sub-menu{
+	display:none;
+	position:absolute;
+	z-index:500;
+	float:left;
+	top:100%;
+	zoom:1;
+	overflow:visible;
+	visibility:visible;
+}
+#megaMenu ul ul.sub-menu-1,
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu{
+	min-width:98%;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li{
+	min-width:100px;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li{
+	min-width:50px;
+	position:relative;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li a{
+	white-space: nowrap;
+}
+#megaMenu ul ul.sub-menu li a{
+	padding:.3em 10px;
+	margin:.2em 0px;
+	line-height:1.2em;
+	width:auto;
+	display:block;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a,
+#megaMenu ul ul.sub-menu li a{
+	background:transparent;
+}
+#megaMenu.megaMenu-nojs ul li:hover > ul.sub-menu-1 {
+	display: block;
+}
+#megaMenu.megaMenu-withjs ul li:hover > ul.sub-menu-1 {
+	display: none;
+}
+#megaMenu ul li.ss-nav-menu-mega  ul.sub-menu ul.sub-menu{
+	display:block;
+	position:relative;
+	top:auto;
+	left:auto;
+}
+#megaMenu li ul.sub-menu{
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+#megaMenu li.ss-nav-menu-mega ul.sub-menu.sub-menu-1{
+	padding-bottom:8px;
+	border:1px solid transparent;
+	padding:10px;
+	width:600px;
+}
+#megaMenu li.ss-nav-menu-mega.ss-nav-menu-mega-alignRight ul.sub-menu.sub-menu-1{
+	right:0px;
+	left:auto;
+}
+#megaMenu li.ss-nav-menu-mega  ul.sub-menu-1 > li{
+	display: inline-block;
+	float:left;
+	margin-top:5px;
+	position:relative;
+}
+
+#megaMenu ul li.ss-nav-menu-mega  ul ul.sub-menu li{
+	display: block;
+}
+
+
+
+#megaMenu ul li{
+	font-size:12px;
+	list-style-image:none;
+	/*position:relative;*/
+}
+#megaMenu ul li.ss-nav-menu-mega  ul.sub-menu li{
+	font-size:11px;
+	min-width:100px;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li a{
+	width:auto;
+	display:block;
+	background:transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu > li:hover > a{
+	background: transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul li.ss-nav-menu-item-depth-1{
+	margin-right:30px;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu{
+	width:auto;
+	float:none;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li{
+	display:block;
+	float:none;	
+}
+#megaMenu ul li.ss-nav-menu-mega .ss-nav-menu-verticaldivision{
+	clear:both;
+}
+#megaMenu ul li.ss-nav-menu-mega .sub-menu-newcol{
+	float:left;
+}
+
+
+#megaMenu li.ss-nav-menu-mega .ss-nav-menu-header a{
+	font-weight:normal;
+}
+
+#megaMenu li.ss-nav-menu-mega .ss-nav-menu-header > a{
+	font-weight:bold;
+	margin-bottom:4px;
+}
+#megaMenu li.ss-nav-menu-mega .megaMenu-thumb{
+	width:15px;
+	height:15px;
+	margin-right:5px;
+	vertical-align:middle;
+}
+#megaMenu ul li.ss-nav-menu-reg a{
+	display:block;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu-1{
+	border:1px solid transparent;
+	padding-bottom:8px;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li a{
+	margin:0px;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu ul.sub-menu{
+	top:-1px;
+	border-style:solid;
+	border-width:1px;
+}
+#megaMenu.megaMenu-nojs ul li.ss-nav-menu-reg ul.sub-menu > li:hover > ul.sub-menu{
+	display:block;
+	left:100%;
+}
+#megaMenu.megaMenu-withjs ul li.ss-nav-menu-reg ul.sub-menu > li > ul.sub-menu{
+	display:none;
+	left:100%;
+	top:0;
+}
+
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a{
+	background-image:url(images/subtri.png);
+	background-position: 94% 50%;
+	background-repeat: no-repeat;
+	padding-right:15px;
+}
+#megaMenu ul li.mega-with-sub > a,
+#megaMenu ul li.ss-nav-menu-mega > a{
+	background-image:url(images/toptri.png);
+	background-position: 97% 50%;
+	background-repeat: no-repeat;
+	padding-right:20px;
+	
+	display:block;
+}
+
+#megaMenu ul li.ss-nav-menu-mega a{
+	/*background-position: 95% 50%;*/
+}
+
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li.ss-nav-menu-highlight > a,
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li.ss-nav-menu-highlight > a{
+	color:#000099;
+}
+
+#megaMenu .wpmega-link-title{
+	display:block;
+	line-height:1.4em;
+}
+#megaMenu .wpmega-item-description{
+	display:inline;
+	clear:none;
+	float:none;
+	line-height:10px;
+	font-size:11px;
+	padding-bottom:3px;
+	font-weight:normal;
+}
+#megaMenu .ss-nav-menu-with-img{
+	min-height:20px;			/* Height of Pic + Space */
+}
+#megaMenu > ul > li.ss-nav-menu-with-img{
+	min-height:0px;
+}
+#megaMenu .ss-nav-menu-with-img img{
+	float:left;
+}
+#megaMenu .ss-nav-menu-with-img.ss-nav-menu-notext img{
+	float:none;
+}
+#megaMenu .ss-nav-menu-with-img.ss-nav-menu-notext .wpmega-item-description{
+	padding-left:0px;	
+	padding-bottom:0px;
+}
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title,
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description,
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description{
+	padding-left:30px;			/* Width of Pic + Space */
+	display:block;
+}
+
+
+
+
+
+/****************** 
+ * VERTICAL
+ ******************/
+ 
+#megaMenu.megaMenuVertical ul.megaMenu > li{
+	padding:0px;
+	display:block;
+}
+#megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-item-depth-0{
+	display:block;
+	float:none;
+	clear:none;
+}
+#megaMenu.megaMenuVertical ul.megaMenu > li.ss-nav-menu-mega > a,
+#megaMenu.megaMenuVertical ul.megaMenu li.mega-with-sub > a, 
+#megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-mega > a {
+	background-image:url(images/subtri.png);
+	background-position:97% 50%;
+	background-repeat:no-repeat;
+	display:block;
+}
+
+#megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-item-depth-0 ul.sub-menu-1{
+	top:0px;
+	left:99%;
+	
+}
+#megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-reg ul.sub-menu{
+	padding:4px 0px;
+}
+
+#megaMenu .wpmega-nonlink{
+	padding:3px 10px;
+}
+
+
+
+
+
+
+
+/** CONTACT FORM 7 (External Plugin) **/
+.li#menu-item-79 ul{ display:block !important; }
+
+.wpmega-nonlink div.wpcf7 p{
+	margin-bottom:.1em;
+	clear:both;
+}
+.wpmega-nonlink div.wpcf7 label{
+	width:50px;
+	float:left;
+	padding-top:.4em;
+	color:inherit;
+}
+.wpmega-nonlink div.wpcf7 span{
+	position:relative;
+}
+.wpmega-nonlink div.wpcf7 input[type="text"],
+.wpmega-nonlink div.wpcf7 textarea{
+	/*width:255px;*/
+	width:95%;
+	padding:.4em;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	font-family:inherit;
+	max-height:100px;
+	font-size:12px;
+	margin-top:.1em;
+	position:relative;
+	float:left;
+}
+.wpmega-nonlink div.wpcf7 input[type="text"]:focus,
+.wpmega-nonlink div.wpcf7 input[type="text"]:hover,
+.wpmega-nonlink div.wpcf7 textarea:focus,
+.wpmega-nonlink div.wpcf7 textarea:hover{
+	background:#fcfcfc;
+} 
+.wpmega-nonlink div.wpcf7 input.wpcf7-submit{
+	font-size:12px;
+	margin-top:.2em;
+	clear:both;
+}
+.wpcf7-form-control-wrap span.wpcf7-not-valid-tip{
+	position:absolute;
+	top:-9px;
+	left:0px;
+	padding:9px 6px;
+	width:95%;
+	font-size:12px;
+}
+.wpcf7-form div.wpcf7-response-output{
+	width:93%;
+}
+
+
+#megaMenu .wpmega-nonlink{
+	width:auto;
+}
+#megaMenu .wpmega-nonlink ul{
+	display:block;
+	position:relative;
+	left:auto;
+	top:auto;
+	width:auto;
+	float:none;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	zoom:1;
+	width:100%;
+}
+
+#megaMenu .wpmega-nonlink ul li.widget{
+	margin-bottom:1em;
+	float:left;
+}
+
+#megaMenu .wpmega-nonlink .widgettitle{
+	margin-bottom:.6em;
+}
+
+
+/* Recent Posts */
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li ul.wpmega-postlist li{
+	margin-bottom:1em;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li ul.wpmega-postlist img{
+	float:left;
+	padding:4px;
+	background:url(images/glass.png) repeat;
+	border:1px solid #e9e9e9;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li ul.wpmega-postlist-w-img div.wpmega-postlist-title,
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li ul.wpmega-postlist-w-img div.wpmega-postlist-content{
+	padding-left:70px;
+	color:inherit;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li ul.wpmega-postlist div.wpmega-postlist-title a{
+	padding:4px 0px;
+	font-size:13px;
+}
+
+#megaMenu ul li.ss-nav-menu-mega ul li.ss-nav-menu-item-depth-1.ss-sidebar{
+	margin-right:0px;
+}
+#megaMenu .wpmega-widgetarea h2.widgettitle{
+	font-size:12px;
+}
+
+
+/* Widget Columns */
+#megaMenu ul ul .wpmega-nonlink.wpmega-widgetarea ul{
+	/*margin-right:-100px;*/
+	float:left;
+}
+#megaMenu .wpmega-nonlink li.widget{
+	float:left;
+}
+
+/* 1/2 */
+#megaMenu .wpmega-nonlink.ss-colgroup-2 li{
+	width:46%;
+	margin-right:8%;
+}
+/* 1/3 */
+#megaMenu .wpmega-nonlink.ss-colgroup-3 li{
+	width:29%;
+	margin-right:6%;
+}
+/* 2/3 */
+#megaMenu .wpmega-nonlink.ss-colgroup-3 li.ss-colspan-2{
+	width:64%;
+	margin-right:6%;
+}
+/* 1/4 */
+#megaMenu .wpmega-nonlink.ss-colgroup-4 li{
+	width:21%;
+	margin-right:5%;
+}
+/* 2/4 */
+#megaMenu .wpmega-nonlink.ss-colgroup-4 li.ss-colspan-2{
+	width:47%;
+	margin-right:5%;
+}
+/* 3/4 */
+#megaMenu .wpmega-nonlink.ss-colgroup-4 li.ss-colspan-3{
+	width:73%;
+	margin-right:5%;
+}
+/* 1/5 */
+#megaMenu .wpmega-nonlink.ss-colgroup-5 li{
+	width:16%;
+	margin-right:5%;
+}
+/* 2/5 */
+#megaMenu .wpmega-nonlink.ss-colgroup-5 li.ss-colspan-2{
+	width:37%;
+	margin-right:5%;
+}
+/* 3/5 */
+#megaMenu .wpmega-nonlink.ss-colgroup-5 li.ss-colspan-3{
+	width:58%;
+	margin-right:5%;
+}
+/* 4/5 */
+#megaMenu .wpmega-nonlink.ss-colgroup-5 li.ss-colspan-4{
+	width:79%;
+	margin-right:5%;
+}
+/* Final Column - no right margin */
+#megaMenu ul.megaMenu .wpmega-nonlink.wpmega-widgetarea li.widget.wpmega-last-child{ /* class added via JS for IE7 */
+	margin-right:0px !important;
+}
+#megaMenu .wpmega-nonlink.wpmega-widgetarea li:last-child{	
+	margin-right:0px !important;
+}
+#megaMenu .wpmega-nonlink li.widget li{
+	width:auto;
+}
+
+
+
+/**********************************************************
+ * COLUMNS
+ *
+ *
+ **********************************************************/
+
+.ss-colgroup{}
+
+#megaMenu .ss-colgroup .ss-col{
+	float:left;
+}
+
+/* 1/2 */
+#megaMenu .ss-colgroup-2 > .ss-col{
+	width:46%;
+	margin-right:8%;
+}
+/* 1/3 */
+#megaMenu .ss-colgroup-3 > .ss-col{
+	width:29%;
+	margin-right:6%;
+}
+/* 2/3 */
+#megaMenu .ss-colgroup-3 > .ss-col.ss-colspan-2{
+	width:64%;
+	margin-right:6%;
+}
+/* 1/4 */
+#megaMenu .ss-colgroup-4 > .ss-col{
+	width:21%;
+	margin-right:5%;
+}
+/* 2/4 */
+#megaMenu .ss-colgroup-4 > .ss-col.ss-colspan-2{
+	width:47%;
+	margin-right:5%;
+}
+/* 3/4 */
+#megaMenu .ss-colgroup-4 > .ss-col.ss-colspan-3{
+	width:73%;
+	margin-right:5%;
+}
+/* 1/5 */
+#megaMenu .ss-colgroup-5 > .ss-col{
+	width:16%;
+	margin-right:5%;
+}
+/* 2/5 */
+#megaMenu .ss-colgroup-5 > .ss-col.ss-colspan-2{
+	width:37%;
+	margin-right:5%;
+}
+/* 3/5 */
+#megaMenu .ss-colgroup-5 > .ss-col.ss-colspan-3{
+	width:58%;
+	margin-right:5%;
+}
+/* 4/5 */
+#megaMenu .ss-colgroup-5 > .ss-col.ss-colspan-4{
+	width:79%;
+	margin-right:5%;
+}
+/* 1/6 */
+#megaMenu .ss-colgroup-6 > .ss-col{
+	width:14%;
+	margin-right:3%;
+}
+/* 1/7 */
+#megaMenu .ss-colgroup-7 > .ss-col{
+	width:12%;
+	margin-right:2.5%;
+}
+/* Final Column - no right margin */
+#megaMenu .ss-colgroup-2 > .ss-col.ss-col-2,
+#megaMenu .ss-colgroup-3 > .ss-col.ss-col-3,
+#megaMenu .ss-colgroup-4 > .ss-col.ss-col-4,
+#megaMenu .ss-colgroup-5 > .ss-col.ss-col-5,
+#megaMenu .ss-colgroup-6 > .ss-col.ss-col-6,
+#megaMenu .ss-colgroup-7 > .ss-col.ss-col-7{
+	margin-right:0px;
+}
+
+#megaMenu .wpmega-divider-container{
+	width:100%;
+	margin:0px;
+}
+
+#megaMenu .wpmega-divider{
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #fff;
+	/*margin:0px 10px 10px 10px;*/
+	margin:0px 0px 10px 0px;
+	clear:both;
+	height:0px;
+}
+
+#megaMenu ul ul.sub-menu li .wpmega-nonlink a{
+	padding:0px;
+}
+
+/* Top Level Search Bar */
+#megaMenu > ul.megaMenu > li > .wpmega-widgetarea{
+	padding-left:10px;
+	padding-right:10px;	
+}
+#megaMenu > ul.megaMenu > li > .wpmega-widgetarea > ul > li{
+	margin:0px;
+}
+#megaMenu > ul.megaMenu > li > .wpmega-widgetarea > ul > li > .widgettitle{
+	float:left;
+}
+#megaMenu > ul.megaMenu > li > .wpmega-widgetarea > ul > li > form#searchform div{
+	padding-top:7px;
+}
+#megaMenu > ul.megaMenu > li > .wpmega-widgetarea > ul > li > form#searchform input[type="text"]{
+	width:115px;
+	font-size:12px;
+	border:1px solid #000;
+	height:16px;
+	float:left;
+	padding:1px 3px;
+	border-radius:2px 0px 0px 2px;
+	-moz-border-radius:2px 0px 0px 2px;
+	-webkit-border-radius:2px 0px 0px 2px;
+	line-height:16px;
+}
+#megaMenu > ul.megaMenu > li > .wpmega-widgetarea > ul > li > form#searchform input[type="submit"]{
+	width:20px;
+	height:20px;
+	background:#000 url(images/search.png) center no-repeat;
+	border:1px solid #000;
+	display:inline-block;
+	float:left;
+	cursor:pointer;
+	border-radius:0px 2px 2px 0px;
+	-moz-border-radius:0px 2px 2px 0px;
+	-webkit-border-radius:0px 2px 2px 0px;
+	text-indent:-999em;
+}
+

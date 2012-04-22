@@ -1,0 +1,2207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>UberMenu Support Manual</title>
+
+<style type="text/css">
+@font-face {
+	font-family: 'ChunkFive';
+	src: url('fonts/ChunkFive/Chunkfive-webfont.eot');
+	src: local('☺'), url('fonts/ChunkFive/Chunkfive-webfont.woff') format('woff'), url('fonts/ChunkFive/Chunkfive-webfont.ttf') format('truetype'), url('fonts/ChunkFive/Chunkfive-webfont.svg#webfontb5K2fJwj') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body{
+	background:url(images/demo_bkg.jpg) repeat;
+	margin:0;
+	padding:0;
+	
+}
+#wrap { 
+	background:transparent url(images/glass.png) top right repeat;
+	margin: 40px auto; 
+	font-family: Lucida Grande, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	color: #333; 
+	line-height: 20px; 
+	width: 620px; 
+	padding: 25px; 
+	
+	border:1px solid #fff;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	
+	text-shadow:0px 1px 1px #fff;
+}
+
+fieldset { margin: 30px 0; padding: 30px; }
+legend { font-size: 18px; padding: 0 10px; color: #202020; }
+pre{
+	border: solid 1px #fff;
+	padding:15px; 
+	background: #efefef;
+	width:95%;
+	font-family:Arial, sans-serif;
+}
+a {
+	color: #000;
+}
+hr{
+	background: #FFF;
+	height: 1px;
+	border: none;
+	border-bottom: 1px dotted #ddd;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+a img{
+	border: none;
+}
+h2{
+	margin-top:2em;
+	color:#8c2702;
+}
+h3, h4{
+	color:#333;
+	
+}
+h1.title, h2.title{
+	color:#000;
+	font-family:ChunkFive, Arial, sans-serif;
+	font-weight:normal;
+	margin:0px;
+}
+h1.title,
+h1.title a{
+	font-size:40px;
+	color:#800000;
+	padding-right:55px;
+	padding-top:2px;
+	line-height:40px;
+	margin-bottom:0px;
+	text-decoration:none;
+}
+h1.title{
+	background:transparent url(images/sevensparklogo.png) top right no-repeat;
+}
+.mega-api td.mega-op-name{
+	width:30%;
+	padding-right:20px;
+	vertical-align:top;
+	font-style:italic;
+	color:#660000;
+	color:#8C2702;
+}
+.mega-api h4{
+	margin:0px; padding:0px;
+}
+.mega-ex{
+	width:90%;
+	background:#ddd;
+}
+.mega-ex td{
+	padding-left:10px;
+	width:25%;
+	
+}
+
+.mega-ex td.mega-top{
+	background:url("images/glass.png") repeat scroll right top transparent;
+	color:#777;
+}
+.mega-sel{
+	font-weight:bold;
+	color:#fff;
+	background:#000;
+	text-shadow:none;
+}
+.clear{ clear:both; }
+blockquote{
+	font-family:Georgia, Times New Roman, serif;
+	font-style:italic;
+	border:1px solid #fff;
+	background:#dfdfdf;
+	margin:10px 0px;
+	padding:10px;
+}
+
+table.compare{
+	margin-left:10px;
+	margin-right:10px;
+}
+table.compare td{
+	vertical-align:top;
+	padding:0px 10px;
+}
+td.hdr{
+	color:#8C2702;
+	font-size:13px;
+	font-weight:bold;
+}
+
+/** COLUMNS **/
+.ss-colgroup .ss-col{
+	float:left;
+}
+
+/* 1/2 */
+.ss-colgroup-2 > .ss-col{
+	width:46%;
+	margin-right:8%;
+}
+/* 1/3 */
+.ss-colgroup-3 > .ss-col{
+	width:29%;
+	margin-right:6%;
+}
+/* 2/3 */
+.ss-colgroup-3 > .ss-col.ss-colspan-2{
+	width:64%;
+	margin-right:6%;
+}
+/* 1/4 */
+.ss-colgroup-4 > .ss-col{
+	width:21%;
+	margin-right:5%;
+}
+/* 2/4 */
+.ss-colgroup-4 > .ss-col.ss-colspan-2{
+	width:47%;
+	margin-right:5%;
+}
+/* 3/4 */
+.ss-colgroup-4 > .ss-col.ss-colspan-3{
+	width:73%;
+	margin-right:5%;
+}
+/* 1/5 */
+.ss-colgroup-5 > .ss-col{
+	width:16%;
+	margin-right:5%;
+}
+/* 2/5 */
+.ss-colgroup-5 > .ss-col.ss-colspan-2{
+	width:37%;
+	margin-right:5%;
+}
+/* 3/5 */
+.ss-colgroup-5 > .ss-col.ss-colspan-3{
+	width:58%;
+	margin-right:5%;
+}
+/* 4/5 */
+.ss-colgroup-5 > .ss-col.ss-colspan-4{
+	width:79%;
+	margin-right:5%;
+}
+/* Final Column - no right margin */
+.ss-colgroup-2 > .ss-col.ss-col-2,
+.ss-colgroup-3 > .ss-col.ss-col-3,
+.ss-colgroup-4 > .ss-col.ss-col-4,
+.ss-colgroup-5 > .ss-col.ss-col-5{
+	margin-right:0px;
+	
+}
+
+.ss-affiliate{
+	width:560px;
+	height:25px;
+	margin:0px auto;
+	position:relative;
+	
+	position:fixed;
+	bottom:0;
+	right:0;
+}
+.ss-affiliate-inner{
+	position:absolute;
+	width:100%;
+	left:0px;
+	font-size:12px;
+	line-height:1.4em;
+	padding:4px;
+	background:#98b03a;
+	color:#000;
+	text-shadow:0px 1px 1px #dbef8b;
+	border:2px solid #fff;
+	border-bottom:none;
+	
+	box-shadow:0px 0px 3px #999;
+	-moz-box-shadow:0px 0px 3px #999;
+	-webkit-box-shadow:0px 0px 3px #999;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	text-transform:uppercase;
+	font-family:Cabin, Arial, sans-serif;
+	font-weight:bold;
+	text-align:center;
+}
+.ss-affiliate-inner a{
+	text-decoration:none;
+	color:#222;	
+}
+.ss-affiliate-inner a:hover{
+	color:#000;	
+}
+
+#wpmme-alert{
+	position:fixed;
+	width:100%;
+	left:0px;
+	top:0px;
+	font-size:12px;
+	line-height:1.4em;
+	padding:4px;
+	background:#98b03a;
+	color:#000;
+	text-shadow:0px 1px 1px #dbef8b;
+	
+	background:#d54937; /*#FFEA73; /*#8C2702; /*	#AE4A24;*/
+	color:#EEE; /*#8C2702;*/
+	text-shadow:0px 1px 1px rgba(0,0,0,.6);
+
+	border-bottom:2px solid #fff;
+	
+	box-shadow:0px 0px 3px #999;
+	-moz-box-shadow:0px 0px 3px #999;
+	-webkit-box-shadow:0px 0px 3px #999;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	text-transform:uppercase;
+	font-family:Cabin, Arial, sans-serif;
+	font-weight:bold;
+	text-align:center;
+}
+
+#wpmme-alert a{
+	color:#FFF;
+	text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="wpmme-alert">Having trouble managing lots of menu items?  Try the <a href="http://bit.ly/nBXGPF">Menu Management Enhancer for WordPress &rarr;</a></div>
+
+<div class="ss-affiliate"><div class="ss-affiliate-inner"><a href="http://wpmegamenu.com/ubermenu-affiliate-program">Did you know?  
+	You can earn money by referring new UberMenu users &raquo;</a></div></div>
+<div id="wrap">
+<h1 class="title"><a href="http://wpmegamenu.com">UberMenu</a></h1>
+<h2 class="title">Support Manual</h2>
+
+<p>Here are some tips on using UberMenu.  Please take a minute to read through this manual before contacting me directly.  
+If you've tried this manual and it hasn't solved your issue, please check out the online documentation at 
+<a href="http://wpmegamenu.com/help">wpmegamenu.com</a>, the latest version of this manual.  
+</p> 
+
+<p>If you find your problem is not solved through either of these means, please contact me as described on my
+<a href="http://codecanyon.net/user/sevenspark">profile page</a>.  Please use the account you used to purchase the plugin 
+and describe the means you've attempted to solve the problem when you contact me.  Thanks!</p>
+
+<p>You can always find the latest version of this file at <a href="http://wpmegamenu.com/help">http://wpmegamenu.com/help/</a>.  Last updated: November 28, 2011.</p>
+
+<h2>Contents</h2>
+<ol>
+<li><a href="#MEGA-about">About UberMenu</a></li>
+<li><a href="#MEGA-requirements">Requirements</a>
+	<ol>
+	<li><a href="#MEGA-wp3-compat">How can I tell if my theme is compatible with WordPress 3 Menus?</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-installation">Installation &amp; Setup</a>
+	<ol>
+	<li><a href="#MEGA-installation-install">Install the Plugin</a></li>
+	<li><a href="#MEGA-setup">Setup the Menu</a></li>
+	<li><a href="#MEGA-remove-residuals">Remove Residual Styling (optional)</a></li>
+	<li><a href="#MEGA-timthumb">Setup TimThumb (optional)</a></li>
+	<li><a href="#MEGA-setup-widgets">Setup Widgets</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-install-updates">Installing Updates</a></li>
+<li><a href="#MEGA-wp-menu-ops">New WordPress Menu Options</a>
+	<ol>
+	<li><a href="#MEGA-activate-locs">Activate UberMenu Locations</a></li>
+	<li><a href="#MEGA-menu-item-ops">Menu Item Options</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-uber-panel">The UberMenu Options Panel</a>
+	<ol>
+	<li><a href="#MEGA-uber-panel-settings">Settings</a></li>
+	<li><a href="#MEGA-uber-panel-style-generator">Style Generator &amp; Preview</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-structure">UberMenu Structure</a>
+	<ol>
+	<li><a href="#MEGA-visualize">Visualizing UberMenu Layouts</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-adding-content">Adding Content to Your UberMenu</a>
+	<ol>
+	<li><a href="#MEGA-flyout">Normal Flyout Menus</a></li>
+	<li><a href="#MEGA-mega-normal">Mega Menus - Normal Link Content</a></li>
+	<li><a href="#MEGA-mega-images">Mega Menus - Link Content with Images</a></li>
+	<li><a href="#MEGA-mega-images-notext">Mega Menus - Link Content with Images - No Text</a></li>
+	<li><a href="#MEGA-mega-descriptions">Mega Menus - Link Content with Descriptions</a></li>
+	<li><a href="#MEGA-mega-nonlink">Content Beyond Links: Contact Forms, Blog Posts, Maps, and More!</a>
+		<ol>
+		<li><a href="#MEGA-mega-widgets">Adding Content Via Widgets</a></li>
+		<li><a href="#MEGA-mega-widgets-top">Adding a Top-Level Widget</a></li>
+		<li><a href="#MEGA-mega-shortcodes">Adding Content Via Shortcodes</a></li>
+		</ol>
+	</li>
+	<li><a href="#MEGA-inc-shortcodes">Included Shortcodes</a>
+		<ol>
+		<li><a href="#MEGA-inc-shortcodes-col">Columns shortcode</a></li>
+		<li><a href="#MEGA-inc-shortcodes-posts">Recent Posts</a></li>
+		</ol>
+	</li>
+	<li><a href="#MEGA-mega-hr">Adding Horizontal Rules</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-CSS-Only">Using UberMenu as a CSS-only menu, without jQuery</a>
+	<ol>
+	<li><a href="#MEGA-CSS-Only-disable-js">Disabling javascript</a></li>
+	<li><a href="#MEGA-CSS-Only-apply-css">Applying CSS styles</a></li>
+	</ol>
+</li>
+<li><a href="#MEGA-custom-styles">Creating Your Own Styles</a>
+	<ol>
+	<li><a href="#MEGA-custom-styles-generator">Through the UberMenu Control Panel</a></li>
+	<li><a href="#MEGA-custom-styles-css">Via CSS</a>
+		<ol>
+		<li><a href="#MEGA-custom-styles-css">Get Firebug</a></li>
+		</ol>
+	</li>
+	</ol>
+</li>
+<li><a href="#MEGA-add-wp3-menu-support">UberMenu Easy Integration - Using UberMenu with Themes that do not support WordPress 3 Custom Menus</a></li>
+<li><a href="#MEGA-FAQ">Frequently Asked Questions</a>
+	<ol>
+	<li><a href="#MEGA-FAQ-submenu-size">My submenus are not being sized properly</a></li>
+	<li><a href="#MEGA-FAQ-menu-width">My Mega Menu takes the full width of the page. I want it to be centered to the width of my content. How can I do this?</a></li>
+	<li><a href="#MEGA-FAQ-menu-height">How can I change the height of my mega menu?</a></li>
+	<li><a href="#MEGA-FAQ-flyout-width">How can I control the width of the flyout menus?</a></li>
+	<li><a href="#MEGA-FAQ-menu-right">How can I align my menu to the right?</a></li>
+	<li><a href="#MEGA-FAQ-menu-item-nolink">How can I create a menu item that does not link to another page?</a></li>
+	<li><a href="#MEGA-FAQ-multiple-mega-menus">More than one of my menus is being megafied - but I only activated one - how can I fix this?</a></li>
+	<li><a href="#MEGA-FAQ-menu-styles-distorted">The Menu Styles are distorted and don't look like the demo</a></li>
+	<li><a href="#MEGA-FAQ-submenu-hidden">My sub menus are being hidden behind other content. How can I fix this?</a></li>
+	<li><a href="#MEGA-FAQ-animation-speed">How can I change the animation speed of my submenus?</a></li>
+	<li><a href="#MEGA-FAQ-arrow-indicators">How can I remove the arrow indicators altogether?</a></li>
+	<li><a href="#MEGA-FAQ-create-columns">How can I create columns?</a></li>
+	<li><a href="#MEGA-FAQ-widget-areas">Why don't I have any UberMenu Widget Areas available?</a></li>
+	<li><a href="#MEGA-FAQ-switch-themes">I switched themes and UberMenu stopped working.  What happened?</a></li>
+	<li><a href="#MEGA-FAQ-right-sidebar">How can I use a Vertical UberMenu in a right sidebar?</a></li>
+	<li><a href="#MEGA-FAQ-outside-trigger">How can I trigger the menu from a link outside the menu?</a></li>	
+	<li><a href="#MEGA-FAQ-gmaps">How can I make Google Maps work better in the menu?</a></li>
+	<li><a href="#MEGA-FAQ-PHP4-error">I receive a Parse Error when activating the plugin.  Why?</a></li>
+	<li><a href="#MEGA-FAQ-columns-warning">When I use the columns shortcode, I get a PHP Warning.  What gives?</a></li>
+	<li><a href="#MEGA-FAQ-wp-multisite">Can I use UberMenu with WordPress MultiSite/WPMU?</a></li>
+	<li><a href="#MEGA-FAQ-current-menu-item">How can I highlight the current menu item?</a></li>
+	<li><a href="#MEGA-FAQ-IE-HTML5">My menu works in all other browsers but isn't styled at all in Internet Explorer (IE).  I hate that $%&# browser!</a></li>
+	<li><a href="#MEGA-FAQ-Custom-CSS">Where should I put my custom CSS?</a></li>
+	<li><a href="#MEGA-FAQ-change-font-size">How can I change the font size with custom CSS?</a></li>
+	<li><a href="#MEGA-FAQ-style-on-login">UberMenu is unstyled on the login/registration page.  How can I fix this?</a></li>
+	<li><a href="#MEGA-FAQ-full-width-submenus">How can I make my submenus full width?</a></li>
+	</ol>
+</li>
+<li><a href="#theme-specific">Theme-Specific Implementation Guides</a>
+	<ol>
+	<li><a href="#theme-mingle">Mingle</a></li>
+	<li><a href="#theme-genesis">Genesis</a></li>
+	<li><a href="#theme-karma">Karma</a></li>
+	<li><a href="#MEGA-FAQ-headwayintegration">Headway Theme &lt; 2.0.11</a></li>
+	<li><a href="#theme-Redux">Redux by Orman Clark</a></li>
+	<li><a href="#theme-Builder">iThemes Builder</a></li>
+	</ol>
+</li>
+</ol>
+
+<h2 id="MEGA-about">About UberMenu</h2>
+<p>UberMenu integrates directly with the WordPress 3 Navigation Menu System to give you a seamless user experience.  UberMenu
+adds new options to the normal Menu Items to give you extra flexibility and customization options.
+</p>
+
+<h2 id="MEGA-requirements">Requirements</h2>
+<p>There are several requirements for use of UberMenu</p>
+<ul>
+<li><strong>WordPress 3</strong></li>
+<li>Use of the <strong><a href="http://codex.wordpress.org/Appearance_Menus_SubPanel">WordPress 3 Menu System</a></strong> <br/>
+	This can be accessed through the Control Panel of any WordPress 3 install via <em>Appearance &gt; Menus</em></li>
+<li><strong>A WordPress 3 Menu System-Compatible Theme</strong><br/>
+	The WordPress theme you use must support WordPress 3 Navigation Menus and Theme Locations (<a href="#MEGA-wp3-compat">How can I tell?</a>) <br/>
+	</li>
+<li>PHP5.2+</li>
+<li>jQuery 1.4.2+ (if your theme is properly including WordPress's included jQuery library, you should be all set)</li>
+<li>For use of the included columns shortcode (which is optional), enabled PHP module PCRE version 7.8 or later is required. You can check your version by using <code>phpinfo()</code>. PCRE 7 .8 has been around since 2008, so most servers should support this.</li>
+	
+</ul>
+
+<h2 id="MEGA-wp3-compat">How can I tell if my theme is compatible with WordPress 3 Menus?</h2>
+
+<blockquote>Note: For technical people, this means the theme must use the WordPress standard best practice of calling <code>wp_nav_menu</code> with the <code>theme_location</code> parameter.  If you don't know
+how to check the code of your theme, just follow the instructions below.</blockquote>
+
+<p>Your theme must properly implement the WordPress 3 Custom Menu System in order to support WordPress out of the box (note that you can still use UberMenu without a properly supported theme, but you'll need to add some PHP).  To check if your theme supports WP3 Menus:</p>
+
+<ol>
+<li>Log into the WordPress Admin area.</li>
+<li>Navigate to <em>Appearance &gt; Menus</em>.  If this option is not available, WP3 Menus are not supported.</li>
+<li>In the <em>Menus</em> panel, look at the Theme Locations meta box.  It will tell you if your theme supports WP3 Menus.  
+</li>
+</ol>
+<table class="compare">
+<tr>
+<td class="hdr">Theme Supports WP3 Menus</td>
+<td class="hdr">Theme Does NOT Support WP3 Menus</td>
+</tr>
+<tr>
+<td>
+<blockquote>Your theme supports 1 menu. Select which menu you would like to use.</blockquote>
+</td>
+<td>
+<blockquote>The current theme does not natively support menus, but you can use the "Custom Menu" widget to add any menus 
+you create here to the theme's sidebar.</blockquote>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/WP3_menu_support.png" title="This theme supports WP3 Menus"/>
+</td>
+<td>
+<img src="images/WP3_no_menu_support.png" title="This theme DOES NOT support WP3 Menus"/>
+<strong>You need <a href="#MEGA-add-wp3-menu-support">UberMenu Easy Integration</a></strong>
+</td>
+</tr>
+</table>
+
+<p><strong>Known Exceptions:</strong> </p>
+<ul>
+<li><strong>Artisteer</strong> does not call <code>wp_nav_menu</code>, so it does not support UberMenu out of the box.  You'll need to use <a href="#MEGA-add-wp3-menu-support">UberMenu Easy Integration</a> with Artisteer.</li>
+<li><strong>Headway</strong> does not support theme locations, so you'll need to follow special instructions to set it up if you want to use multiple menus: <a href="#MEGA-FAQ-headwayintegration">How to integrate Headway</a>.  <strong>Given the non-standard way Headway is implemented, I do not recommend using UberMenu with Headway unless you are very comfortable with adding custom code to your site</strong>.  <s><strong>Update:</strong> As of Headway version 2.0.11, I am informed that Headway now uses the standard WordPress Menu System, so it should now be much easier to integrate!</s> &larr; I have received conflicting reports regarding current compatibility, so I am reverting this to "not supported out of the box".  If you don't see the <em>Theme Locations</em> box pictured above in your <em>Appearance > Menus</em> screen, you'll need to follow the Headway integration instructions. </li>
+</ul>
+
+<h2 id="MEGA-installation">Installation &amp; Setup</h2>
+
+<h3 id="MEGA-installation-install">Install the Plugin</h3>
+<ol>
+<li>Decompress the .zip file you downloaded from CodeCanyon.</li>
+<li>Find the <code>wp-uber-menu</code> folder.</li>
+<li>Upload the <code>wp-uber-menu</code> folder to your <code>wp-content/plugins</code> directory.</li>
+<li>Navigate to your Control Panel: Plugins</li>
+<li>Under <strong>UberMenu</strong>, click <em>Activate</em></li>
+</ol>
+
+<h4>What did this do?</h4>
+<p>Installing the Plugin doesn't automatically change any navigation menus - so it won't mess up anything on your site, either.
+Once you install the plugin, you'll get:</p>
+<ul>
+<li>A new Control Panel Menu under <em>Appearance &gt; UberMenu</em></li>
+<li>New options for Menu Items in the <em>Appearance &gt; Menus</em> Control Panel</li>
+<li>A new meta options box labeled <em>Activate Uber Menu Locations</em> in <em>Appearance &gt; Menus</em></li>
+</ul>
+
+<h3 id="MEGA-setup">Setup the Menu</h3>
+<ol>
+<li>Navigate to <em>Appearance &gt; Menus</em></li>
+<li>Create a Menu, if you don't already have one</li>
+<li>Add Menu Items to your Menu.  See <a href="#MEGA-structure">UberMenu Structure</a> for information on structuring your menu.</li>
+<li>Activate the MegaMenu option on the top level menu items</li>
+<li>Save your Menu</li>
+<li>Set the Menu Location of your Menu in the <em>Theme Locations</em> Meta Box</li>
+<li>Activate the Menu Location as a Mega Menu under <em>Activate Uber Menu Locations</em></li>
+<li>Customize your Mega Menu Items
+	<ul>
+		<li>First Level
+			<ul><li>Activate Mega Menu</li><li>Set Images</li><li>Set Descriptions</li></ul>
+		</li>
+		<li>Second Level
+			<ul><li>Set Vertical Divisions</li><li>Set Content Overrides (shortcodes)</li><li>Set Widget Areas</li><li>Set Images</li></ul>
+		</li>
+		<li>Third Level
+			<ul><li>Set Content Overrides (shortcodes)</li><li>Set Widget Areas</li><li>Set Images</li><li>Set Headers</li><li>Set Highlights</li><li>Start new columns</li></ul>
+		</li>
+	</ul>
+</li>
+</ol>
+
+<p>Here's a screencast on <a href="http://www.youtube.com/watch?v=kmwupZwgukU">How to Create a Mega Menu in WordPress</a> with UberMenu:</p>
+
+<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="365" src="http://www.youtube.com/embed/kmwupZwgukU" frameborder="0" allowFullScreen></iframe>
+
+<br/>
+
+<h3 id="MEGA-remove-residuals">Remove Residual Styling (optional)</h3>
+<p>Sometimes, even after activating UberMenu, some of the theme's default menu styles will still affect the menu - often negatively.  These styles conflict with the UberMenu styles, and are known as "residual styling".  To make UberMenu function like the demo, we need to neutralize this effect.  If you experience this issue with your theme, this section will help you resolve the issue.  Otherwise, you can skip to the next section.</p>
+
+<h4>Understanding the Issue <small><a href="#MEGA-remove-residuals-solution">Skip to the solution</a></small></h4>
+
+<p>The most common scenario with residual styling is that a theme uses a hard-coded wrapper div around the navigation menu with a particular ID.  Like this:</p>
+
+<pre><code>&lt;div id="nav"&gt;
+   &lt;?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Which produces the following HTML structure:</p>
+
+<pre><code>&lt;div id="nav"&gt;
+   &lt;ul id="default-menu" &gt;
+      &lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+         &lt;a&gt;&lt;/a&gt;
+         &lt;ul&gt;
+            &lt;li&gt;...
+         &lt;/ul&gt;
+      &lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+<p>The default menu styles for the theme would usually look something like this:</p>
+
+<pre><code>#nav ul{
+  /* Styles for menu bar */
+}
+#nav ul li{
+  /* Styles for top level items */
+}
+#nav ul li a{
+  /* Styles for top level links */
+}
+#nav ul li ul li{
+  /* Styles for sub menu items */
+}</code></pre>
+
+<p>When UberMenu is activated, we end up with this structure:</p>
+
+<pre><code>&lt;div id="nav"&gt;
+   &lt;div id="megaMenu"&gt; 
+      &lt;ul class="megaMenu"&gt; 
+	/* UberMenu Structure*/ 
+      &lt;/ul&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>And as a result, some of the style selectors for <code>#nav</code> still apply.  </p>
+
+<p id="MEGA-remove-residuals-solution">To neutralize these styles we have two choices (pick one):</p>
+
+<ol>
+<li>Remove the original menu styles from the theme</li>
+<li>Change the ID of the wrapper (<code>#nav</code>) div</li>
+</ol>
+
+
+<h4>Removing the original menu styles from the theme</h4>
+
+<p>Removing the original menu styles from the theme is the best way to go for performance reasons, but it is slightly more involved than just chaning the ID in most cases.</p>
+
+<p>First you'll need to determine the ID of the root item for the menu (your theme's version of <code>#nav</code>).  Look at the HTML or use <a href="http://getfirebug">Firebug</a> to inspect the menu and determine the ID of the div that wraps <code>#megaMenu</code>.</p>
+
+<p>Next you'll need to track down where the menu styles are located.  Most often this is in the theme's <code>style.css</code> file.  Inspecting the menu <a href="http://getfirebug">Firebug</a> makes tracking down the CSS very easy.</p>
+
+<p>Once you find the styles for the default menu, remove them (or comment them out).  Often, the styling for the wrapper div itself (i.e. <code>#nav{ /* this code */ }</code> ) handles the positioning of the menu, so you may want to leave it intact.</p>
+
+
+<h4>Changing the ID of the wrapper div</h4>
+
+<p>The simplest "silver bullet" solution is to just change the ID of the wrapper div - that is, the div that all the menu item selectors are based on.  In the example, it is <code>#nav</code></p>
+
+<p>A really easy test to determine whether this will work is to use <a href="http://getfirebug">Firebug</a> to inspect the DOM and find the element that wraps the <code>#megaMenu</code> div.  (This is most often the div used to target the menu, but it may be a more outer wrapper).  Simply highlight the wrapper div and change the ID to something else in the Firebug inspector.  Test the menu by hovering again.  If the residual styles are gone, that's the ID you're looking for.</p>
+
+<p>Once you've identified the div whose ID you need to change, you need to find it.  Most often it is in your theme's header.php file.  If not, you can search through your theme's files for the string 'wp_nav_menu' or the id="{your id}".  When you find the line, just edit the ID and change it to any other string, for example, change:</p>
+
+<pre><code>&lt;div id="nav"&gt;
+   &lt;?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>to</p>
+
+<pre><code>&lt;div id="nav_uber"&gt;
+   &lt;?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>One final step</strong>.  You may find that doing this removes the residual styles, but also changes the placement of the menu.  The solution for this is to find the CSS for the wrapper div in the theme's CSS and change the selector from <code>#nav</code> to your new selector (e.g. <code>#nav_uber</code>).  This is generally the only style you'd need to change, as it most often contains the positioning code.</p>
+
+
+<h3 id="MEGA-timthumb">Setup TimThumb (optional)</h3>
+<ol>
+<li>To setup TimThumb you will need to make the <code>timthumb</code> directory writeable</li>
+<li>If you can, set the owner of the directory to your server's username.  For example, on Ubuntu you would run:<br/>
+<code>sudo chown www-data -R wp-content/plugins/wp-uber-menu/timthumb</code>
+</li>
+<li>If not, you can set the permissions of the <code>timthumb/tt.php</code> file and the <code>timthumb/cache</code> directory to <code>777</code>, but this is subobtimal.</li>
+<li>Otherwise, see <a href="http://www.darrenhoyt.com/2008/04/02/timthumb-php-script-released/">this site</a> for installation instructions</li>
+</ol>
+
+<h3 id="MEGA-setup-widgets">Setup Widgets</h3>
+<ol>
+<li>UberMenu provides an unlimited number of Widget Areas.  Set how many you want to have via <em>Appearance &gt; UberMenu &gt; Advanced &gt; Number of Sidebars</em>.  
+You can always increase this later.
+</li>
+<li>Navigate to <em>Appearance &gt; Widgets</em> and add widgets to the UberMenu Widget Areas</li>
+<li>Navigate to <em>Appearance &gt; Menus</em> and expand a Menu Item (create it first if you haven't already), preferably a second-level item (though third-level+ will also work)</li>
+<li>Click <em>Show/Hide UberMenu Options</em></li>
+<li>In the <em>Display a Widget Area</em> select box, select the Widget Area to display in this Menu Item</li>
+<li>Save the Menu</li>
+<li>Now UberMenu will load the Widget Area into your Menu.  You can update the Widgets in the future without needing to change the 
+Menu again.</li>
+</ol>
+
+<h2 id="MEGA-install-updates">Installing Updates</h2>
+<p>Installing updates is just like installing UberMenu for the first time.  It's always a good idea to back everything up before you
+upgrade, especially if you have made any changes to UberMenu's files, as the upgrade will overwrite all files.  UberMenu settings
+set through the control panel will all remain intact.</p>
+
+<h3>Backing Up</h3>
+<ol>
+<li>It is always a good idea to back up your plugin before making any changes</li>
+<li>Open your FTP program and FTP into your site and navigate to the <em>wp-content/plugins</em> directory.</li>
+<li>Download the <em>wp-uber-menu</em> folder and save it as a backup</li>
+<li>If you have edited any files, especially the <em>custom.css</em> file, backing this file up is crucial</li>
+</ol>
+
+<h3>Upgrading</h3>
+<ol>
+<li>Download the new version of the plugin from CodeCanyon</li>
+<li>In your browser, log into the WordPress control panel.</li>
+<li>Navigate to <em>Plugins</em></li>
+<li>Deactivate UberMenu</li>
+<li>Switch to your FTP program, FTP into your site and navigate to the <em>wp-content/plugins</em> directory.</li>
+<li>Delete UberMenu (the entire <em>wp-uber-menu</em> folder).</li>
+<li>On your desktop, decompress the zip file you downloaded from CodeCanyon</li>
+<li>Open the unzipped folder, which will contain a new <em>wp-uber-menu</em> directory</li>
+<li>FTP the new <em>wp-uber-menu</em> folder into the plugins directory.</li>
+<li>If you saved an edited copy of your <em>custom.css</em> file as a custom preset, upload it to <em>wp-uber-menu/styles/skins</em> 
+directory (overwrite the new <em>custom.css</em> file).</li>
+<li>Switch back to your browser and go back to the <em>Plugins</em> panel</li>
+<li>Reactivate UberMenu by clicking <em>Activate</em></li>
+</ol>
+
+<p>Note: If you are running a local server, just copy the files rather than FTPing</p>
+
+
+<h2 id="MEGA-wp-menu-ops">New WordPress Menu Options</h2>
+
+<h3 id="MEGA-activate-locs">Activate UberMenu Locations</h3>
+<p>You'll notice a new Meta Options box in the Menus Control Panel.  This panel determines whether a particular menu location
+will be megafied.  The location of your menu must be activated in order to megafy the menu.  This allows you to have certain 
+one location megafied while others remain normal menus.</p>
+<p>Please note that you can only have one Mega Menu per page.  You could have 2 mega menus, but only if they never occur on the 
+same page.</p>
+
+<h3 id="MEGA-menu-item-ops">Menu Item Options</h3>
+<p>UberMenu integrates directly with the WordPress Menu System.  It adds new options to the Menu Items you can add via 
+<em>Appearance &gt; Menus</em>.  Here's a rundown of those options and what they do.</p>
+
+<table class="mega-api">
+<tr>
+	<td colspan="2"><h4>All Levels</h4></td>
+</tr>
+<tr>
+	<td class="mega-op-name">Set Thumbnail</td>
+	<td>Click this button to access the Media Upload popup.  Upload an image and set it as the Featured Image to apply the 
+	thumbnail to the Menu Item.</td>
+</tr>
+<tr>
+	<td colspan="2"><h4>Level 1</h4></td>
+</tr>
+<tr>
+	<td class="mega-op-name">MegaMenu this Tab</td>
+	<td>This top level option must be selected in order to megafy the tab.  If the box is unchecked, it will be displayed as a 
+		normal flyout menu.  This allows you to mix-and-match Mega tabs and Flyout tabs in a single menu.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Align Submenu to Right</td>
+	<td>Align the submenu for this menu item to the right rather than the left.  Good to activate for menu items on the far right.</td>
+</tr>
+<tr>
+	<td colspan="2"><h4>Level 2</h4></td>
+</tr>
+<tr>
+	<td class="mega-op-name">Content Override <br/>(Level 2+)</td>
+	<td>This input accepts shortcodes (or any text input), which allows for unlimited customization. <br/>
+	Note that this input only appears if <em>Allow Content Overrides</em> is activated in the UberMenu Control Panel</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Display a Widget Area <br/>(Level 2+ | can be activated for Level 1)</td>
+	<td>Select which Widget Area should be displayed in this Menu Item. <br/>
+	Note that this input only appears if <em>Number of Sidebars</em> is greater than 0 in the UberMenu Control Panel</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Vertical Division</td>
+	<td>Check this box to start a new row in the sub menu.  For example, if you have 8 second level items, placing a
+	vertical division on the fifth item will create two rows of four items each.</td>
+</tr>
+<tr>
+	<td colspan="2"><h4>Level 3</h4></td>
+</tr>
+<tr>
+	<td class="mega-op-name">Display this item as a header?</td>
+	<td>Check this box to display this item like the items in Level 2, as a header.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Highlight this item</td>
+	<td>Check this box to highlight the item - generally in a secondary color or bolded.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Start a new Mega Column</td>
+	<td>Splits this list of sub-items into two columns just before this item.</td>
+</tr>
+</table>
+
+
+
+<h2 id="MEGA-uber-panel">The UberMenu Options Panel</h2>
+<p>The UberMenu Options Panel is the place to customize your UberMenu.  It is accessible via your Control Panel, under
+<em>Appearance &gt; Uber Menu</em>.  With it you can:</p>
+<ul>
+<li>Configure settings like orientation, transition, trigger event, description display, image size, and more</li>
+<li>Set how you'd like to style your Menu</li>
+<li>Select Style Presets</li>
+<li>Create Custom Styles and generate CSS</li>
+<li>Preview your Menu</li>
+</ul>
+
+<h3 id="MEGA-uber-panel-settings">Settings</h3>
+<p>Here's a rundown of the various settings that you can configure:</p>
+
+<table class="mega-api">
+<tr>
+	<td class="mega-op-name">Orientation</td>
+	<td>Select whether you want your menu to be displayed in a horizontal or vertical fashion.  You may still need to wrap
+	your menu in a container to get your site structure right.</td>
+</tr>
+
+<tr>
+	<td class="mega-op-name">Transition</td>
+	<td>Select whether you'd like the submenus to slide or fade in and out.</td>
+</tr>
+
+<tr>
+	<td class="mega-op-name">Trigger</td>
+	<td>Select whether the submenus should display when the user hovers over or clicks the top level items.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Description Displays</td>
+	<td>Turn description display on or off for each level</td>
+</tr>
+
+<tr><td><br/><strong>Image Settings</strong></td><td></td></tr>
+<tr>
+	<td class="mega-op-name">Scale and Crop Images</td>
+	<td>This turns TimThumb on or off.  If you can't configure it correctly, just turn it off.  Images will be resized but not cropped.</td>
+</tr>
+
+<tr>
+	<td class="mega-op-name">Image Width and Height</td>
+	<td>Set the dimensions of the image.  This will be applied to all images.  The units are pixels.</td>
+</tr>
+
+<tr><td><strong>Advanced</strong></td><td></td></tr>
+<tr>
+	<td class="mega-op-name">Menu Width</td>
+	<td>Set the width of your menu.  Only necessary if you don't like its default width.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Maximum Submenu Width</td>
+	<td>Normally, a submenu can only be as wide as the top level menu bar. If you want it to be wider, set this value.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Auto Align</td>
+	<td>Automatically align the second-level menu items by setting all widths the width of the widest item in each submenu.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">HTML5</td>
+	<td>Use the HTML5 <code>&lt;nav&gt;</code> element as the menu container.  This will likely break IE unless you are compensating for it.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Allow Content Overrides</td>
+	<td>Turn this on to allow the use of shortcodes in Menu Items</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Number of Sidebars</td>
+	<td>Enter an integer to set the number of widgetized areas to use for UberMenu.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Allow Top-level Widgets</td>
+	<td>Turn this on to put Widgets in top level menu items, like a search box in the nav bar.  This is disabled by default to avoid 
+		unintended styling issues.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">jQuery Enhanced</td>
+	<td>Disable to use UberMenu without jQuery enhancement.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Hover Interval</td>
+	<td>The number of milliseconds before the hover event is triggered. Defaults to 100.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Debug Mode</td>
+	<td>Run in DEBUG mode. Disable for production sites.</td>
+</tr>
+
+<tr><td><br/><strong>Theme Integration</strong></td><td></td></tr>
+<tr>
+	<td class="mega-op-name">Strict Mode</td>
+	<td>By default, UberMenu provides some flexibility so it can work even if themes haven't adhered to WordPress Best Practices 
+		in the code. This leniency can cause the megafication of multiple menus, however, so disable it if you're having multiple 
+		mega menu issues.  If you upgrade and your menu stopped working, you may need to turn this off.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Remove Theme Conflicts</td>
+	<td>This removes previously registered javascript acting on the menu.  You can disable this if you choose, but you might end up
+		with strange effects due to your theme's default menu JS.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Minimize Residual Styling</td>
+	<td>Turn this on if you have styles from your theme that are negatively affecting UberMenu. It will change the ID of the menu's top level UL.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Easy Integration</td>
+	<td>For themes that don't properly support WordPress 3 Menus. Just turn this on and place <?php uberMenu_easyIntegrate(); ?> in your header.php file.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Use IE Fix Script</td>
+	<td>Disable this if it is causing problems or if you are already including it elsewhere./td>
+</tr>
+<tr>
+	<td class="mega-op-name">Run jQuery in noConflict Mode</td>
+	<td>Used when themes are using a secondary jQuery library.  If you're getting jQuery errors, try flipping this switch.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Include jQuery</td>
+	<td>Don't disable this unless you know what you are doing</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Include Hover Intent</td>
+	<td>You can probably disable this if your theme already includes hoverIntent.js</td>
+</tr>
+
+
+<tr><td><br/><strong>Style Settings</strong></td><td></td></tr>
+<tr>
+	<td class="mega-op-name">Style Application</td>
+	<td>Set how the styles should be included.  You can use a preset, include CSS from the style generator, or manually add your own styles</td>
+</tr>
+<tr>
+	<td class="mega-op-name">Style Preset</td>
+	<td>Select a preset to use as your menu style.</td>
+</tr>
+
+<tr><td><br/><strong>Preview</strong></td><td></td></tr>
+<tr>
+	<td class="mega-op-name">Menu To Preview</td>
+	<td>Select the Menu you'd like to preview</td>
+</tr>
+</table>
+
+<h3 id="MEGA-uber-panel-style-generator">Style Generator &amp; Preview</h3>
+<p>When you select either <strong>Do Nothing</strong> or <strong>Include Generated Custom CSS Inline</strong>, you will be presented
+with the UberMenu Style Generator.  Select the custom colors and font sizes you'd like to use and click <em>Preview</em> to test out
+your styles.  Save it when you're satisfied.</p>
+
+<p>Important: Note that the Style Previewer gives a general idea of colors and sizes, but the menu may look slightly different on
+the front page, due to styling issues in the WordPress admin interface.  Also, not all styles can be configured through the 
+Style Generator of course.  You can always tweak the CSS.</p>
+
+
+<h2 id="MEGA-structure">UberMenu Structure</h2>
+
+<p>Example structure:</p>
+<pre style="width:250px;">
+<strong>Electronics</strong>
+	<strong>Computers</strong>
+		Laptops
+		Desktops
+		Netbooks
+		Accessories
+	<strong>TVs</strong>
+		LCD
+		Plasma
+		DLP
+		Projection
+	<strong>Cell Phones</strong>
+		AT&amp;T
+		Verizon
+		Sprint
+		T-Mobile
+	<strong>MP3 Players</strong>
+		iPod
+		iPod Touch
+		iPod Nano
+		Sandisk
+
+<strong>Sports &amp; Outdoors</strong>
+	<strong>Outdoor Activities</strong>
+		Hiking
+		Skiing
+		Snowboarding
+	<strong>Team Sports</strong>
+		Soccer
+		Football
+		Basketball
+		Hockey
+		Baseball
+		
+<strong>Clothing</strong>
+	<strong>Women's Clothing</strong>
+		Shirts
+		Pants
+		Skirts
+		Dresses
+	<strong>Men's Clothing</strong>
+		Shirts
+		Pants
+		Ties
+</pre>
+
+<p>The hierarchical WordPress 3 Menu Management System is translated into a MegaMenu structure in the following way:</p>
+
+<p>Example structure (Electronics selected)</p>
+<table class="mega-ex">
+<tr>
+<td class="mega-sel">Electronics</td><td class="mega-top">Sports &amp; Outdoors</td><td class="mega-top">Clothing</td><td class="mega-top">&nbsp;</td>
+</tr>
+<tr>
+<td><strong>Computers</strong></td><td><strong>TVs</strong></td><td><strong>Cell Phones</strong></td><td><strong>MP3 Players</strong></td>
+</tr>
+<tr>
+<td>Laptops</td><td>LCD</td><td>AT&amp;T</td><td>iPod</td>
+</tr>
+<tr>
+<td>Desktops</td><td>Plasma</td><td>Verizon</td><td>iPod Touch</td>
+</tr>
+<tr>
+<td>Netbooks</td><td>DLP</td><td>Sprint</td><td>iPod Nano</td>
+</tr>
+<tr>
+<td>Accessories</td><td>Projection</td><td>T-Mobile</td><td>Sandisk</td>
+</tr>
+
+</table>
+
+<h4>Top Level Menu Items</h4>
+<p>For a horizontally-aligned menu, the top level menu items are listed in the row of main links in the navigation menu.  For a
+vertically-aligned menu, these items are aligned in a column.  The top level menu items are always visible.</p>
+
+<p>Example of Top Level Menu Items: Electronics | Books | Sports &amp; Outdoors | Clothing</p>
+
+<h4>Second Level Menu Items</h4>
+<p>The second level menu items (those that are indented once below top level menu items) are treated as headers within the
+sub menus.  They contain third level menu items to for sub menu groups.  These groups are aligned as columns within the sub menu,
+with the second level menu items as the headers at the top of each column.</p>
+
+<p>Example of Second Level Menu Items, sub-menu of Electronics: Computers | TVs | Cell Phones | MP3 Players</p>
+
+<h4>Third Level Menu Items and Below</h4>
+<p>All menu items deeper than level 3 are treated as level 3 menu items.  These items are the content links within their parent
+categories.  Sibling items are aligned vertically in list-fashion below their column headers (second level menu items). </p>
+
+<p>Example of Third Level Menu Items, under Electronics &gt; Computers: Laptops | Desktops | Netbooks | Accessories</p>
+
+
+<!-- Show image with arrows -->
+
+<h3 id="MEGA-visualize">Visualizing UberMenu Layouts</h3>
+
+<p>The following outline represents the hierarchical structure of the WordPress 3 Menu Management tool.  The graphic that
+follows shows a visualization of how the hierarchy is translated to the UberMenu.</p>
+
+<pre style="width:300px;">
+<strong>A:Level 1</strong>
+    ...
+<strong>B:Level 2</strong>
+    ...
+<strong>C:Level 1</strong>
+    <strong>C:A:Level 2</strong>
+        C:A:A Level 3
+        C:A:B Level 3
+        C:A:C Level 3
+        C:A:D Level 3
+        C:A:E Level 3
+    <strong>C:B:Level 2</strong>
+        C:B:A Level 3
+        C:B:B Level 3
+        C:B:C Level 3
+        C:B:D Level 3
+        C:B:E Level 3
+    <strong>C:C:Level 2</strong>
+        C:C:A Level 3
+        C:C:B Level 3
+        C:C:C Level 3
+        C:C:D Level 3
+        C:C:E Level 3
+    <strong>C:D:Level 2</strong> [Shortcode]
+    <strong>C:E:Level 2</strong>
+        C:E:A Level 3
+        C:E:B Level 3
+        C:E:C Level 3
+        C:E:D Level 3
+        C:E:E Level 3
+    <strong>C:F:Level 2</strong>
+        C:F:A Level 3
+        C:F:B Level 3
+        C:F:C Level 3
+        C:F:D Level 3
+        C:F:E Level 3
+    <strong>C:G:Level 2</strong>
+        C:G:A Level 3
+        C:G:B Level 3
+        C:G:C Level 3
+        C:G:D Level 3
+        C:G:E Level 3
+    <strong>C:H:Level 2</strong>
+        C:H:A Level 3
+        C:H:B Level 3
+        C:H:C Level 3
+        C:H:D Level 3
+        C:H:E Level 3
+    <strong>C:I:Level 2</strong> [Widget Area - populated with 4 widgets]
+<strong>D:Level 1</strong>
+    ...
+<strong>E:Level 1</strong>
+    ...
+<strong>F:Level 1</strong>
+    ...
+</pre>
+<br/>
+
+<img src="images/visualization.png" />
+
+<h2 id="MEGA-adding-content">Adding Content to Your UberMenu</h2>
+
+<p>To create an UberMenu, follow the <a href="#MEGA-setup">Setup Instructions</a>, and then add content to your Menu.  Items 
+are added via the normal WordPress 3 Menu Management mechanism.  For more information, read <a href="http://codex.wordpress.org/Appearance_Menus_SubPanel#Add_Menu_Items">this</a>.</p>
+
+<h3 id="MEGA-flyout">Normal Flyout Menus</h3>
+
+<p>Even in an UberMenu, you can still create a normal flyout menu.  Just make sure that <strong>Activate Mega Menu</strong> is NOT checked
+on the top level menu item.  Add items as usual.  Note that if the top level item is not a Mega Menu, the Mega Menu options are 
+non-applicable.</p>
+
+<h3 id="MEGA-mega-normal">Mega Menus - Normal Link Content</h3>
+
+<p>Adding normal link content to a Mega Menu is as simple as creating a flyout menu.  Just make sure that <strong>Activate Mega Menu</strong>
+IS checked on the top level menu item.  Second level items create column headers and third level items fill the content below those
+headers.  See <a href="#MEGA-structure">UberMenu Structure</a> for more information on how the structure works.  See 
+<a href="#MEGA-menu-item-ops">Menu Item Options</a> for more information on the available Mega Menu options.</p>
+
+<h3 id="MEGA-mega-images">Mega Menus - Link Content with Images</h3>
+<p>UberMenu makes it easy to apply an image to each menu item, in any level.  The image is placed to the left of the menu item 
+text.  Images are automatically resized.  You can control how this is done (via TimThumb or normal browser scaling) and to what size
+the images are scaled through the <a href="#MEGA-uber-panel">UberMenu Options Panel</a>.</p>
+
+<p>Here's how to apply an image to a Menu Item:</p>
+
+<ol>
+<li>Add a Menu Item</li>
+<li>Click <em>Show/Hide UberMenu Options</em> to display the advanced options.</li>
+<li>Click <em>Set Thumbnail</em></li>
+<li>A popup dialogue appears.  If the <em>Select Files</em> button is not available, click the <em>From Computer</em> tab</li>
+<li>Click <em>Select Files</em></li>
+<li>Upload or select the image</li>
+<li>Click <em>Use as Featured Image</em> - *this is critical</li>
+<li>Change any other settings, like title, etc, and click <em>Save All Changes</em></li>
+<li>Close the popup</li>
+<li>You should now see a preview of your image in the Menu Item</li>
+<li>Save your Menu</li>
+</ol>
+
+<h3 id="MEGA-mega-images-notext">Mega Menus - Link Content with Images - No Text</h3>
+<p>If you want to create image-only links (icons but no text), you'll need to use a special tag.  In the <em>Navigation Label</em>
+box within a Menu Item, enter the following:</p>
+
+<pre><code>--notext--</code></pre>
+
+<p>Note that if you try to save the item with a blank Navigation Label, the item will be removed</p>
+
+<h3 id="MEGA-mega-descriptions">Mega Menus - Link Content with Descriptions</h3>
+<p>Adding descriptions to your Menus is simple with UberMenu.  Here's how to set them up:</p>
+
+<ol>
+<li>Activate the description levels you'd like to use in the <em>Appearance &gt; UberMenu</em> control panel.  Under <em>Descriptions</em>,
+turn on the levels you'd like to activate.  Note: this is done because descriptions are often set by default to the excerpt or full post text -
+if you only want to display descriptions on a particular level, this saves you from deleting all of the menu item descriptions on other levels.</li>
+<li>In the <em>Appearance &gt; Menus</em> panel, click the <em>Screen Options</em> tab in the upper right corner of the screen.</li>
+<li>In the <em>Show advanced menu properties</em> section, check the <em>Description</em> box.</li>
+<li>Now in every Menu Item box, there should be a text area labeled <em>Description</em>.  Enter text to set a description.</li>
+<li>Save your menu.</li>
+</ol>
+
+<h3 id="MEGA-mega-nonlink">Content Beyond Links: Contact Forms, Blog Posts, Maps, and More!</h3>
+
+<p>UberMenu can take just about any type of content, via 2 techniques: Widgets and Shortcodes (or a combination of the two).</p>
+
+<h4 id="MEGA-mega-widgets">Adding Content Via Widgets</h4>
+
+<p>Adding content via widgets is easy, but takes several steps.  The basic process is to (1) Create a Menu Item (2) Set the Menu
+Item's Widget Area (3) Populate the Widget Area with Widgets.  You should think of a single menu item, which contains a single 
+Widget Area, as a row in the second level of the menu.  Multiple widgets in a single widget area create columns within that row.</p>
+
+<ol>
+<li>Set the number of Widget Areas you are going to use via the Control Panel <em>Appearance &gt; Uber Menu &gt; Advanced &gt;
+ Number of Sidebars</em>.  It must be set to at least 1 to use widgets.</li>
+<li>Save the UberMenu options with your new Number of Sidebars.</li>
+<li>Create a Menu Item (or edit an existing menu item) - second level menu items work the best</li>
+<li>Expand the UberMenu Options and select a Widget Area in the dropdown next to <em>Display a Widget Area</em></li>
+<li>Save your Menu</li>
+<li>Navigate to <em>Appearance &gt; Widgets</em></li>
+<li>Add Widgets to the Area that you selected in step 3, <em>UberMenu Widget Area X</em></li>
+<li>Note that you may use shortcodes within text widgets.</li>
+<li>Save your widgets</li>
+</ol>
+
+<h4 id="MEGA-mega-widgets-top">Adding Top-Level Widgets (new in UberMenu 1.1)</h4>
+
+<p>Note that by default, top-level widgets are deactivated.  To activate top-level widgets:</p>
+
+<ol>
+<li>Navigate to <em>Appearance &gt; UberMenu</em></li>
+<li>Expand <em>Advanced</em> and activate <em>Allow Top-Level Widgets</em></li>
+<li>Save Options</li>
+</ol>
+
+<p>Once you have top-level widgets activated, you'll be able to use widgets in top level menu items as described 
+<a href="#MEGA-mega-widgets">above</a>.  Here are some formatting tips:
+
+<ol>
+<li>Setting the Menu Item's <em>Navigation Label</em> to <strong><code>--notext--</code></strong> will remove the Menu Item text</li>
+<li>Placing a single space in the Widget's <em>Title</em> will remove that formatting (this works well with the Search box)</li>
+<li>The default WordPress searchbox widget has been styled via the presets, but you may need to apply custom styles to other
+widgets to format them properly for the menu</li>
+</ol>
+
+<h4 id="MEGA-mega-shortcodes">Adding Content Via Shortcodes</h4>
+<p>Adding content via shortcodes is easy, but formatting is sometimes unpredictable.  You may need to apply custom CSS styles
+to your menu in order to make your shortcodes display the way you'd like them to - especially custom widths.</p>
+
+<ol>
+<li>In the Control Panel under <em>Appearance &gt; Uber Menu &gt; Advanced</em>, turn <em>Allow Content Overrides</em> <strong>on</strong></li>
+<li>In <em>Appearance &gt; Menus</em>, add an item to your menu</li>
+<li>Expand the UberMenu Options for the Item.</li>
+<li>Enter your shortcode in the <em>Content Override</em> box.</li>
+<li>Save your menu.</li>
+<li>Apply custom styles if necessary</li>
+</ol>
+
+<h3 id="MEGA-inc-shortcodes">Included Shortcodes</h3>
+
+<p>UberMenu comes with some useful shortcodes.</p>
+
+<h4 id="MEGA-inc-shortcodes-col">Columns shortcode</h4>
+<p>Basic link content gets columnized automatically, as does widgetized content.  While this automatic column structure 
+takes care of most use cases, sometimes you want more advanced column structures with uneven columns.  The columns shortcode
+gives you this ability.  Recommended usage is within a text widget.</p>
+
+<p>For example, the following:</p>
+
+<pre><code>[wpmega-colgroup]
+
+[wpmega-col]
+	&lt;h4&gt;Column 1/4&lt;/h4&gt;
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor 
+	dolor vitae felis accumsan.
+[/wpmega-col]
+
+[wpmega-col]
+	&lt;h4&gt;Column 1/4&lt;/h4&gt;
+	Suspendisse ut purus nulla. Integer viverra diam sed augue pretium 
+	iaculis. 
+[/wpmega-col]
+
+[wpmega-col colspan="2"]
+	&lt;h4&gt;Column 1/2&lt;/h4&gt;
+	Curabitur in enim ipsum. Tel congue purus pharetra.  Nullam eget 
+	malesuada justo. Sed egestas, velit vel aliquet vestibulum, urna 
+	urna dapibus enim, non hendrerit lacus urna non justo.	Aliquam 
+	blandit magna eu enim auctor euismod.
+[/wpmega-col]
+
+[/wpmega-colgroup]
+</code></pre>
+
+<p>produces:</p>
+
+<div class="ss-colgroup ss-colgroup-4" style="padding:0px 10px 10px 10px; border:1px solid #fff; background:#eee;">
+	<div class="ss-col ss-col-1">
+		<h4>Column 1/4</h4>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor dolor vitae felis accumsan.
+	</div>
+	<div class="ss-col ss-col-2">
+		<h4>Column 1/4</h4>
+		Suspendisse ut purus nulla. Integer viverra diam sed augue pretium iaculis. 
+	</div>
+	<div class="ss-col ss-col-4 ss-colspan-2">
+		<h4>Column 1/2</h4>
+		Curabitur in enim ipsum. Tel congue purus pharetra.  Nullam eget malesuada justo. Sed egestas, 
+			velit vel aliquet vestibulum, urna urna dapibus enim, non hendrerit lacus urna non justo. 
+			Aliquam blandit magna eu enim auctor euismod.
+	</div>
+	<div class="clear"></div>
+</div>
+
+<p>Add up to <span style="text-decoration: line-through;">5</span> <strong>7</strong> columns, set your colspans, <em>et voila!</em></p>
+
+<h4 id="MEGA-inc-shortcodes-posts">Recent Posts</h4>
+<p>The recent posts shortcode allows you to show a number of recent posts and supports featured images.</p>
+
+<pre><code>[wpmega-recent-posts num="3" img="on" excerpt="on" category="cat_slug"]</code></pre>
+
+<strong>Recent Posts Shortcode Attributes</strong>
+<table class="mega-api">
+<tr>
+	<td class="mega-op-name">num</td>
+	<td>Sets the number of posts to display.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">img</td>
+	<td>Turn featured image display on or off.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">excerpt</td>
+	<td>Turn the post excerpt on or off.</td>
+</tr>
+<tr>
+	<td class="mega-op-name">category</td>
+	<td>Set the category from which to pull posts.  Use the category slug or ID.</td>
+</tr>
+</table>
+
+
+<h3 id="MEGA-mega-hr">Adding Horizontal Rules</h3>
+<p>To add a horizontal rule to your menu, enter the special character sequence <strong><code>--divide--</code></strong>
+into the <em>Navigation Label</em> of a Menu Item.  This Menu Item may contain widgets or shortcodes, or it may be left 
+blank.  To start a new row with the horizontal rule, check the <em>Vertical Division</em> box.</p>
+
+<h2 id="MEGA-CSS-Only">Using UberMenu as a CSS-only menu, without jQuery</h2>
+<p>UberMenu doesn't require JavaScript to work, in fact it is intended to degrade gracefully when JS is not present.  In
+order to use UberMenu without JS, you'll need to disable the UberMenu jQuery functionality, and manually create the CSS
+styles that would normally be applied by the JS.</p>
+
+<h3 id="MEGA-CSS-Only-disable-js">Disabling javascript</h3>
+<ol>
+<li>Navigate to <em>Appearance &gt; UberMenu</em></li>
+<li>Under <em>Advanced</em>, flip the <em>jQuery Enhanced</em> option to <strong>off</strong></li>
+<li>Click <em>Save Options</em></li>
+</ol>
+
+<h3 id="MEGA-CSS-Only-apply-css">Applying CSS styles</h3>
+<p>Once you disable jQuery, you'll want to fine-tune your CSS styles for your submenus to size and align them appropriately.
+You can use <a href="#MEGA-firebug">Firebug</a> to determine the IDs of you menu items and set the <em>width</em> and 
+<em>left</em> properties for each submenu.  You can place the styles in your theme's style.css file or in a 
+<a href="#MEGA-custom-styles-css">custom UberMenustyle sheet</a>.</p>
+
+<p>Here is an example of what these styles might look like.  The IDs will be specific to your site</p>
+
+<pre>/* Special non-CSS styling */
+
+#megaMenu ul #menu-item-48 > ul.sub-menu-1{
+	left:-148px;
+	width:720px;
+}
+#megaMenu ul #menu-item-146 > ul.sub-menu-1{
+	left:-252px;
+	width:920px;
+}
+#megaMenu ul #menu-item-146 > ul.sub-menu-1 #menu-item-167{
+	margin-right:0px;	/* Remove the right margin from the right-most submenu column*/
+}
+#megaMenu ul #menu-item-108 > ul.sub-menu-1{
+	left:-120px;
+	width:440px;
+}
+</pre>
+
+
+
+<h2 id="MEGA-custom-styles">Creating Your Own Styles</h2>
+
+<p>Of course, you're not limited to only the preset styles that come with UberMenu.  You can get as creative as you want.
+UberMenu styles can be controlled via CSS.  The UberMenu Control Panel makes it easy to customize the colors and font sizes
+of a menu via a nice graphical interface.  Alternatively, you can completely customize your own CSS file via the custom.css
+Style Option.</p>
+
+<h3 id="MEGA-custom-styles-generator">Through the UberMenu Control Panel</h3>
+<p>The <em>Appearances &gt; UberMenu</em> Control Panel allows you to generate custom styles with a limited set of CSS
+attributes.</p>
+
+<ol>
+<li>Under <em>Style Settings &gt; Style Application</em>, select either <em>Do Nothing</em> or <em>Include Generated
+Custom CSS Inline</em></li>
+<li>The UberMenu Style Generator will be displayed.</li>
+<li>You can set colors, font sizes, and border radii, etc.</li>
+<li>Click the <em>Preview</em> button to take a look at your styles in practice.  Note that while the colors will be accurate,
+the preview is just meant to give a basic sense of the menu.  Sub menu widths and displays may look strange due to strange
+backend styling, but won't be an issue on the front end. </li>
+<li>Note that using gradients on the <em>Menu Bar Background</em> can cause issues in Internet Explorer, so using background
+images can be safer sometimes.  Also, setting gradients on the sub menu background can cause issues in Internet Explorer if you
+are using Flyout Menus.  Again, background images are safer and can be applied manually via CSS.</li>
+<li>If you want to make minor CSS changes, you can click the <em>Edit CSS Manually</em> box.</li>
+<li>Click <em>Save Options</em> to save your changes.</li>
+<li>If you selected <em>Include Generated Custom CSS Inline</em>, you're all set.  If you selected <em>Do Nothing</em>, you can
+copy the CSS and place it in your own style sheet, like <code>custom.css</code>, for example.</li>
+</ol>
+
+<h3 id="MEGA-custom-styles-css">Via CSS</h3>
+
+<p>You can create your own custom style sheets, too.  There is a "preset" custom sheet set up in <code>styles/skins/custom.css</code>.
+You can generate the basic styles in the style generator and then paste it into the custom style sheet.  Or you could copy a preset 
+style sheet into the custom sheet and alter it that way.  To work with the "custom preset":</p>
+
+<ol>
+<li>In <em>Appearance &gt; UberMenu &gt; Style Settings &gt; Style Application</em> select <em>Use a Preset</em></li>
+<li>In <em>Appearance &gt; UberMenu &gt; Style Settings &gt; Style Preset</em> select <em>Custom</em></li>
+<li>Edit the <code>styles/skins/custom.css</code> file in a text editor and save it to customize the menu style.</li>
+<li>You should always backup this style sheet before updating the plugin.</li>
+</ol>
+
+<h4 id="MEGA-firebug">Get Firebug</h4>
+<p>One great tool for customizing menu styles is the use of Firebug, a Firefox plugin.  It allows you to inspect the HTML and the
+CSS styles, as well as change, add or remove styles temporarily to test changes.  It's by far the best way to fully customize your
+menu style.  You can get it at <a href="http://getfirebug.com/">getfirebug.com</a>.</p>
+
+<p>Here's a great video on using Firebug.</p>
+
+<iframe src="http://player.vimeo.com/video/3087755" width="600" height="376" frameborder="0"></iframe>
+<p><a href="http://vimeo.com/3087755">Using Firebug for CSS</a> from <a href="http://vimeo.com/kristarella">kristarella</a> on 
+<a href="http://vimeo.com">Vimeo</a>.</p>
+
+<h2 id="MEGA-add-wp3-menu-support">UberMenu Easy Integration - Using UberMenu with Themes that do not support WordPress 3 Custom Menus</h2>
+<p>UberMenu works by applying filters to a <a href="http://codex.wordpress.org/Navigation_Menus">WordPress 3 Custom Nav Menu</a>.  
+These menus are inserted into the page via your WordPress Theme.  Normally, UberMenu automatically replaces your 
+theme's WP3 custom menu, when WP3 custom menus are supported.   If your theme does not already support custom menus, you can add
+support by turning on UberMenu Easy Integration and adding a line of PHP code.  Note: you still need to be running WordPress 3.0 or above for this to work.</p>
+
+<h3>1. Activating WordPress 3 Custom Menu Support</h3>
+
+<h4>UberMenu 1.1+</h4>
+<ol>
+<li>Navigate to <em>Appearance &gt; UberMenu</em></li>
+<li>Under <em>Theme Integration</em>, enable <em>Easy Integration</em></li>
+<li>Click <em>Save Options</em></li>
+</ol>
+
+<img src="http://i.imgur.com/nl4Ij.png" alt="" title="UberMenu Easy Integration Switch" />
+
+
+<h3>2. Placing the Menu</h3>
+<p>Now that the theme supports WP3 Menus, we'll need to actually insert the menu somewhere.  Most likely, you'll want to replace
+your theme's old menu, which is usually a call to <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages">wp_list_pages</a>
+or <a href="http://codex.wordpress.org/Function_Reference/wp_page_menu">wp_page_menu</a>, though it can vary depending on your 
+theme.  Once you've removed the old menu and any surrounding <code>&lt;ul&gt;</code> tags, you'll want to insert the following PHP 
+code where the menu should be displayed.  Usually this would be inserted in you theme's <em><strong>header.php</strong></em> file,
+but again this may vary depending on your theme.</p>
+
+<h4>Code for UberMenu 1.1+</h4>
+<pre><code>&lt;?php uberMenu_easyIntegrate(); ?&gt;
+</code></pre>
+
+<p>Note:  The above menu call should not be located inside <code>&lt;ul&gt;</code> tags, even if your theme's default menu is</p>
+
+<p>You can also use the shortcode equivalent, <code>[uberMenu_easyIntegrate]</code> in text widgets, for example</p>
+
+<p>Completing the above two steps should successfully enable your theme to work with UberMenu, giving you an "UberMenu" theme location in your menus panel.  
+Now just <a href="#MEGA-setup">configure UberMenu as usual</a>!</p>
+
+
+
+
+
+<!-----------------------------------------------------------------------------------
+
+				FAQs
+
+------------------------------------------------------------------------------------>
+
+
+
+
+<h2 id="MEGA-FAQ">Frequently Asked Questions</h2>
+
+<h3 id="MEGA-FAQ-submenu-size">My Submenus are not being sized properly</h3>
+<p>This generally indicates that you have a javascript error that is preventing UberMenu from running its script.  To troubleshoot 
+this, install <a href="http://getfirebug.com">Firebug</a> and load the page with Firebug activated.  Look at the console for 
+any javascript errors.  Here is an example:</p>
+
+<img src="http://i.imgur.com/eq1DX.png" title="Firebug reveals Javascript Errors"/>
+
+<p>The errors above are unrelated to UberMenu, but prevent it from working properly.  Most often, these types of errors result from
+poorly coded Plugins or Themes.  They need to be resolved.</p>
+
+<h3 id="MEGA-FAQ-menu-width">My Mega Menu takes the full width of the page.  I want it to be centered to the width of my content.  How can I do this?</h3>
+
+<blockquote><strong>Note that as of UberMenu 1.1, you can change the width of the menu via <em>Appearace > UberMenu > Advanced > 
+Menu Width</em></strong></blockquote>
+
+<p>This means that the container div that your menu is located in is full width.  UberMenu conforms to the width of its container
+so that its settings don't override your theme styles.  If you want to center your menu to your content, you'll need to apply some
+simple CSS:</p>
+
+<pre><code>#megaMenu{
+	width: 960px; /* Your page width */
+	margin: 0 auto;
+}
+</code></pre>
+
+<p>Where <code>960px</code> is replaced with the width of your site content.  You can add this style to any CSS file.  If you're using
+a preset, you might want to copy the preset code to the Custom Preset file, then add this style to the top.  That way, if you
+upgrade the plugin in the future, you won't overwrite your changes.</p>
+
+<p>Note that you could alternatively apply this style to the
+container of the menu (the div that surrounds it).  For example, if the div's ID is <code>access</code>, you could apply this style
+to a style sheet in your theme:</p>
+
+<pre><code>#access{ /* This is the container div that wraps the #megaMenu div */
+	width: 960px; /* Your page width */
+	margin: 0 auto;
+}
+</code></pre>
+
+<h4 id="MEGA-center-items">What if I want the background bar color to span the full width, but the menu items to be within my page width?</h4>
+
+<p>First, you'll need to make sure the theme element containing UberMenu (the one that wraps #megaMenu) isn't constraining the width of the menu.  If it is, you'll need to customize your theme code.</p>
+
+<p>Accomplishing this will mean moving the background from the UL.megaMenu element to the div#megaMenu element.  This code does the trick (note the comments - they're important!)</p>
+
+<pre><code>#megaMenu.megaMenuHorizontal{
+    /* Change "red_twotone.png" to the appropriate image based on your style preset */
+    background:transparent url(../images/red_twotone.png) 50% 50% repeat-x; 
+    /* Change the border color based on your style preset */
+    border:1px solid #ffcccc; 
+}
+#megaMenu.megaMenuHorizontal ul.megaMenu{
+    height:20px;	/* You will need to set the height explicitly.  It's best to measure this height 
+    					using Firebug or Chrome Developer tools, then set it here */
+    width:960px;	/* This should be set to the width of your page.  960px is very common.  
+    					Can be reduced to "center" the menu more */
+    margin:0 auto;	/* Centers the list */
+    background:transparent; /* Removes the old Background */
+    border:none;	/* Removes the old border */
+    float:none;
+    display:block;
+}</code></pre>
+
+<p>Please note this is a customization, and while this is meant to help guide you in the right direction, it won't be possible to support customizations of these types.</p>
+
+
+<h3 id="MEGA-FAQ-menu-height">How can I change the height of my mega menu?</h3>
+
+<p>You can change the height of the menu using CSS.  Depending on the effect you are trying to achieve, you may want to:</p>
+
+<span>Increase the height of the menu bar</span>
+<pre><code>#megaMenu ul.megaMenu{
+  	height:50px;
+}</code></pre>
+
+<span>Increase the padding of the menu bar</span>
+<pre><code>#megaMenu ul.megaMenu{
+  	padding:20px 0px;
+}</code></pre>
+
+<span>Increase the size of the top level menu items <span style="color:red">*recommended for most users</span></span>
+<pre><code>#megaMenu ul.megaMenu > li > a{
+  	padding:20px 0px;
+}</code></pre>
+
+
+
+
+<h3 id="MEGA-FAQ-flyout-width">How can I control the width of the flyout menus?</h3>
+By default the flyout menu submenus are the width of their top level parent.  You can control the width of the flyout submenus via CSS:
+
+<pre><code>#megaMenu ul li.ss-nav-menu-reg ul.sub-menu {
+	width:250px;
+}</code></pre>
+
+OR, you can apply this code to force a non-wrap and auto-size the columns:
+
+<pre><code>#megaMenu ul li.ss-nav-menu-reg ul.sub-menu {
+	white-space:nowrap;
+}</code></pre>
+
+
+
+<h3 id="MEGA-FAQ-menu-right">How can I align my menu to the right?</h3>
+
+<p>By default, the menu fills whatever container it is in (the container is determined by your theme).  For most themes, you can align the
+menu to the right with this code:</p>
+
+<pre><code>#megaMenu ul.megaMenu{
+  	float:right;
+  	width:auto;
+}</pre></code>
+
+<p>If you need to center your menu to the page width because the container is full-width, you can do this (replace 960 with your page width):</p>
+
+<pre><code>#megaMenu{
+	width:960px;
+	margin:0 auto;
+}
+</code></pre>
+
+
+<h3 id="MEGA-FAQ-menu-item-nolink">How can I create a menu item that does not link to another page?</h3>
+<p>You can create "dummy" menu items by using the hash tag.  Just create a custom menu item and set the URL to <code>#</code>.</p>
+
+<img src="http://i.imgur.com/tWhx9.png" title="Creating a dummy menu item" />
+
+
+
+
+<h3 id="MEGA-FAQ-multiple-mega-menus">More than one of my menus is being megafied - but I only activated one - how can I fix this?</h3>
+
+<p>By default, there is some leniency built into UberMenu to accommodate for themes that haven’t implemented WP Nav Menus quite right.
+You just need to turn on <strong>Strict Mode</strong> in <em>Appearance &gt; UberMenu &gt; Theme Integration &gt; Strict Mode</em>.</p>
+
+<img src="http://i.imgur.com/8drNq.png" title="Multiple Menu warning since 1.1.2" />
+
+
+
+
+<h3 id="MEGA-FAQ-menu-styles-distorted">The Menu Styles are messed up and don't look like the demo</h3>
+<p>This means that your theme's menu styles are affecting UberMenu adversely.  Use Firebug to determine how the theme styles the menu.  Usually, the easiest fix is to change the ID or class of the containing div (the one surrounding <code>#megaMenu</code>).  Otherwise, you can delete the menu styles from your theme.  A third option is to counteract the styles using custom CSS.</p>
+
+<p>For detailed instructions, see <a href="#MEGA-remove-residuals">remove residual styling</a>. </p>
+
+<h3 id="MEGA-FAQ-submenu-hidden">My sub menus are being hidden behind other content. How can I fix this?</h3>
+<p>This is usually a z-index issue with your theme's container divs.  There is a simple fix, but it must be applied to the appropriate 
+containers.  Specifically, the adjacent containers of the overlapping elements.  For example, in this situation:</p>
+
+<pre><code>&lt;div id="wrap"&gt;
+  &lt;div id="nav-container"&gt;
+    &lt;div id="megaMenu"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="content"&gt;
+    &lt;div id="overlapping-element"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>You would need to apply these CSS styles:</p>
+
+<pre><code>#nav-container{
+  position:relative;
+  z-index:20;
+}
+#content{
+  position:relative;
+  z-index:10;
+}
+</code></pre>
+
+<p>Put another way, the styles need to be applied to the relevant children of the first common ancestor of the target (overlapping)
+elements.  Above, the first common ancestor is <code>#wrap</code>, and its children are <code>#nav-container</code> and <code>#content</code>.
+Sometimes, the adjacent containers can be several levels up the DOM tree, so it is not necessarily the parent items that need to be positioned.</p>
+
+<h3 id="MEGA-FAQ-animation-speed">How can I change the animation speed of my submenus?</h3>
+
+<p>By default, the slide and fade animations are executed at the "normal" speed.  However, you can make the speed "fast", "slow", or a particular
+duration in milliseconds by changing the javascript.</p>
+
+<ol>
+<li>In a text editor, open <code>wp-uber-menu/js/wpmegamenu.dev.js</code></li>
+<li>You'll see this code around line 143:<br/>
+<pre>	if($u.wpmega.trans == 'fade') $subMenu.fadeIn();
+	else $subMenu.slideDown();</pre>
+</li>
+<li>Pass the <code>fadeIn()</code> or <code>slideDown()</code> functions a duration parameter to change the animation speed, for example:<br/>
+<pre>	else $subMenu.slideDown('fast');</pre>
+You could also use <code>'slow'</code> or an integer like <code>2000</code> (2000 = 2 seconds).</li>
+<li>Save your file</li>
+<li>You now have two options:<br/>
+<ol>
+<li>Switch your UberMenu into debug mode under <em>Appearance &gt; UberMenu &gt; Advanced &gt; Debug Mode</em>.  This will just make UberMenu use
+the development javascript file you just edited instead of the minified file.  (Note this is a good way to test your changes).</li>
+<li>Or you can copy the contents of the file you just edited into <code>wpmegamenu.min.js</code> (replace the existing contents) and save that instead</li>
+</ol>
+</li>
+<li>Optionally, you can minify your new code by using <a target="_blank" href="http://closure-compiler.appspot.com/home">Google's Closure Compiler</a> 
+and put that code in the <code>wpmegamenu.min.js</code> file.</li>
+</ol>
+
+<h3 id="MEGA-FAQ-arrow-indicators">How can I remove the arrow indicators altogether?</h3>
+
+<p>The drop down arrows are a background image on the anchor element. If you just want to remove arrows from items without dropdowns, you can uncheck the
+<em>Mega Menu this tab</em> checkbox on the menu item.  You can remove that altogether just by setting the background image to none, like this:</p>
+
+<pre><code>#megaMenu ul li.mega-with-sub > a, 
+#megaMenu ul li.ss-nav-menu-mega > a {
+  	background-image:none;
+  	padding-right:10px;   /* There is extra padding to show the bkg img normally */
+}</code></pre>
+
+<h3 id="MEGA-FAQ-create-columns">How can I create columns?</h3>
+<p>There are several ways to create columns in your submenus.</p>
+<ol>
+<li>Normal second-level menu items create columns automatically.  <a href="#MEGA-structure">UberMenu Structure</a></li>
+<li>Apply a Widget Area to a second-level menu item.  <a href="#MEGA-mega-widgets">Adding Content via Widgets</a></li>
+<li>You create columns containing any type of content either within a widget or via the content override using the 
+<a href="#MEGA-inc-shortcodes-col">columns shortcode</a></li>
+</ol>
+
+<h3 id="MEGA-FAQ-widget-areas">Why don't I have any UberMenu Widget Areas available?</h3>
+<p>To keep your control panel as tidy as possible, UberMenu Widget Areas are not enabled by default.  To enable them,
+navigate to <em>Appearance &gt; UberMenu</em> and enter an integer greater than zero in the <em>Number of Sidebars</em> 
+box.  Save the options and you will see UberMenu Widget Areas appear in the <em>Widgets</em> control panel.</p>
+
+<h3 id="MEGA-FAQ-switch-themes">I switched themes and UberMenu stopped working.  What happened?</h3>
+<p>Each theme registers different theme locations in which to place the menu.  If your new theme still supports WordPress 3
+Custom Menus, all you'll need to do is go back to <em>Appearance &gt; Menus</em>, set your menu to the new <em>Theme Location</em>
+and activate that location with UberMenu.  If your new theme does not support WP3 Menus, you'll need to follow 
+<a href="#MEGA-add-wp3-menu-support">these instructions</a>.</p>
+
+
+<h3 id="MEGA-FAQ-right-sidebar">How can I use a Vertical UberMenu in a right sidebar?</h3>
+<p>By default, UberMenu flys out to the right, so we'll need to add some custom CSS to adjust that.</p>
+
+<ol>
+<li>Enable UberMenu Easy Integration in the UberMenu Options Panel</li>
+<li>Activate "UberMenu" in <em>Activate Uber Menu Locations</em> and set your desired menu under "UberMenu" in <em>Theme Locations</em> in <em>Appearance &gt; Menus</em>.</li>
+<li>Add a new Text Widget to the sidebar of your choice.</li>
+<li>Set the content of the Text Widget to: <code>[uberMenu_easyIntegrate]</code></li>
+<li>Add this CSS to either your custom.css file (if you are using the 'Custom' Preset) or to a location where you store custom CSS<br/>
+<pre>#megaMenu.megaMenuVertical ul .ss-nav-menu-reg ul.sub-menu,
+#megaMenu.megaMenuVertical ul .ss-nav-menu-mega ul.sub-menu-1{
+	left:auto !important;
+	right:100% !important;
+}</pre></li>
+<li>Modify any other CSS you want, for example to remove or reverse the dropdown/flyout arrow indicators</li>
+<li>Customize the menu as usual.</li>
+</ol>
+
+
+
+<h3 id="MEGA-FAQ-outside-trigger">How can I trigger the menu from a link outside the menu?</h3>
+
+<p>Here's some example code</p>
+
+<pre><code>&lt;!-- HTML to create a trigger for Menu Item 5 --&gt;
+&lt;a class="trigger-element" href="#menu-item-5"&gt;Trigger Menu Item 5&lt;/a&gt;
+</code></pre>
+
+<pre><code>/* jQuery Code for Triggers */
+$('a.trigger-element').click(function(e){
+	e.preventDefault();
+	var $target = $('#megaMenu li'+$(this).attr('href'));
+	if($target.hasClass('megaHover')){
+	    	megaMenuCloseSubMenu($target, false);
+	}
+	else{
+		megaMenuCloseAllSubMenus($target);
+	    	wpmega_showMega($target.get(0));
+	}
+});
+</code></pre>
+
+
+<h3 id="MEGA-FAQ-gmaps">How can I make Google Maps work better in the menu?</h3>
+
+<p>There's a known issue with Google Maps displaying in hidden elements (for example, in tabs, or in menus).  Most of the time this isn't a big issue, but if you need to, you can use the Google Maps API to display the map once the submenu is displayed.  You'll need to be able to handle this coding on your own in order to implement this.</p>
+
+<p>You can call the API as a callback function for the slideDown()/fadeIn() call on line 143 of wpmegamenu.dev.js (if you switch UberMenu into debug mode it'll use this dev script so you can experiment, then re-minify if you wish).
+But in that case you’d probably just be better off just creating the menu once, the first time it is shown. This code will do that:
+
+<pre><code>
+//line 144
+else $subMenu.slideDown('normal', function(){
+
+    //Only generate map if it hasn't been generated 
+    //before, and if its container currently has a width
+    if( $u('#map_canvas').html() == '' && 
+        $u('#map_canvas').width() > 0){
+        var myOptions = {
+            zoom: 14,
+            center: new google.maps.LatLng(42.358544,-71.05957),    //Boston - set coordinates as needed
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    }
+
+});
+</code></pre>
+
+<p>And your HTML in the menu would look like this (you might place it in a widget or a content override):</p>
+
+<pre><code>&lt;div id="map_canvas" style="width:250px; height:250px;"&gt;&lt;/div&gt;</code></pre>
+
+<p>In a future release, the menu will fire a "menu open" event as a callback so that this type of code can be added via bind() instead of editing the core files.</p>
+
+
+
+<h3 id="MEGA-FAQ-PHP4-error">I receive a Parse Error when activating the plugin. Why?</h3>
+<p>If you receive the following error when activating UberMenu:</p>
+
+<pre>Plugin could not be activated because it triggered a fatal error.
+<code>Parse error: parse error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION
+or T_VAR or '}' in /var/www/html/wp-content/plugins/wp-uber-menu/wpMegaWalker.php 
+on line 12</code></pre>
+
+<p>it is because your server is running PHP4, but UberMenu requires PHP5.2+ (see requirements in product description). Not to worry, there are two simple solutions to make it work:
+
+<ol>
+<li>Upgrade your server to PHP5.2.x.  This is the recommended solution, as PHP5 has advantages over PHP4.  Usually this is either an option in your server administration control panel, or your hosting provider can do this for you.</li>
+<li>If you must run PHP4, you can just delete line 12 from <code>plugins/wp-uber-menu/wpMegaWalker.php</code>, which removes the PHP5 code.  Everything should still run smoothly.</li>
+</ol>
+
+
+<h3 id="MEGA-FAQ-columns-warning">When I use the columns shortcode, I get a PHP Warning.  What gives?</h3>
+<p>The columns shortcode uses regular expressions to intelligently determine your columns without the need to identify
+each column's index.  This requires the use of the PHP pcre package, version 7.8 or later.  The following error:</p>
+
+<blockquote>PHP Warning: preg_match_all(): Compilation failed: unrecognized character after (?&lt;</blockquote>
+
+<p>indicates that you are running an older version of pcre.  To solve this error, upgrade your server's pcre package.  
+You can contact your hosting provider for specific details.</p>
+
+<h3 id="MEGA-FAQ-wp-multisite">Can I use UberMenu with WordPress MultiSite/WPMU?</h3>
+<p>UberMenu is only licensed for use on a single WP installation.  If you want to use UberMenu on a WordPress MultiSite
+installation, you must purchase a license for each site.</p>
+
+<p>That being said, UberMenu is not tested with WPMS, and the timthumb functionality of UberMenu may not work properly in
+WPMS installations.</p>
+
+<h3 id="MEGA-FAQ-current-menu-item">How can I highlight the current menu item?</h3>
+
+<p>UberMenu implements all of the standard current menu item classes, so you can target and adjust those properties via custom CSS . You can inspect the top level list items for each page using Firebug to see what is available to you at any given time.  These are the standard options:</p>
+<pre>current-menu-item
+current-menu-parent
+current-menu-ancestor</pre>
+
+<p>To highlight the current menu item red, you could use this style, for example:</p>
+
+<pre><code>#megaMenu > ul.megaMenu > li.ss-nav-menu-item-depth-0.current-menu-item{
+   color:red;
+}</code></pre>
+
+<p>Depending on where you put your code, you may need to employ the <code>!important</code> flag.
+
+
+<h3 id="MEGA-FAQ-IE-HTML5">My menu works in all other browsers but isn't styled at all in Internet Explorer (IE).  I hate that $%&# browser!</h3>
+<p>If your menu is showing up as an unstyled list, it's likely that you have HTML5 enabled.  Internet Explorer can't handle HTML5 tags.  You simply need to deactivate HTML5 via <em>Appearance &gt; UberMenu &gt; Advanced &gt; HTML5</em></p>
+
+<p>Otherwise, use make sure you don't have any plugin/theme javascript errors or residual styling affecting the menu</p>
+
+<h3 id="MEGA-FAQ-Custom-CSS">Where should I put my custom CSS?</h3>
+
+<p>You can put your CSS styles in any stylesheet that makes you happy.  Your choice depends on an inherent trade-off in ease vs. maintainability.</p>
+
+<strong>Option 1: UberMenu's <code>custom.css</code></strong>
+<p>This is the recommended solution.  Remember, custom.css is only loaded if you have the "Custom" preset selected in the UberMenu options.  You'll need to copy your preferred preset styles into this file, and add your custom styles as well.  See <a href="#MEGA-custom-styles-css">Creating your own styles via CSS</a> for details.  This is the best place from a maintenance perspective, because when you upgrade you'll just need to preserve the custom.css file.</p>
+
+<strong>Option 2: A special place where you keep custom CSS.</strong>
+<p>If you have created (or if your theme provides) a special location for custom CSS styles, this is a great place for custom UberMenu styles as well.</p>
+
+<p><em>Note:</em> Just keep in mind that this stylesheet is likely loaded before UberMenu's, so if you're trying to override existing styles you'll need to either use more specific selectors or use the <code>!important</code> flag in your styles.</p> 
+
+<strong>Option 3: Your theme's <code>style.css</code></strong>
+<p>You might already be putting your customizations in your theme's style.css.  This is fine, just make sure you keep track of them.  It's best to keep them all in one place so you can easily transfer them if you upgrade your theme.  Also, see the above note regarding specificity.</p>
+
+<strong>Option 4: UberMenu's preset files</strong>
+<p>This is discouraged, because it will make it difficult to upgrade.  If you want to edit or add to one of these files, copy it to custom.css first as described in Option 1.</p>
+
+<strong>Option 5: UberMenu's <code>basic.css</code></strong>
+<p>This is a core file.  It should never be edited unless you have no intention of ever upgrading UberMenu</p>
+
+<p>Pick your poison! :)</p>
+
+<h3 id="MEGA-FAQ-change-font-size">How can I change the font size with custom CSS?</h3>
+
+<p>Remember, where you place the code will dictate whether the style is used or not.  See <a href="#MEGA-FAQ-Custom-CSS">Where should I put my custom CSS?</a>.  If you place it in a theme style sheet, you'll likely need to either increase your selector specificity or add the <code>!important</code> flag.</p>
+
+<h4>Top Level Menu Items</h4>
+<pre>#megaMenu ul li.ss-nav-menu-item-depth-0 > a{
+	font-size:12px;
+}</pre>
+
+<h4>Submenu Menu Items</h4>
+<pre>#megaMenu ul li.ss-nav-menu-mega  ul.sub-menu li{
+	font-size:11px;
+}</pre>
+
+<h4>Menu Item Descriptions</h4>
+<pre>#megaMenu .wpmega-item-description{
+	font-size:11px;
+}</pre>
+
+<h4>Contact Form Inputs</h4>
+<pre>.wpmega-nonlink div.wpcf7 input[type="text"],
+.wpmega-nonlink div.wpcf7 textarea{
+	font-size:12px;
+}</pre>
+
+<h4>Recent Posts Shortcode</h4>
+<pre>#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li ul.wpmega-postlist div.wpmega-postlist-title a{
+	font-size:13px;
+}</pre>
+
+<h4>Widget Titles</h4>
+<pre>#megaMenu .wpmega-widgetarea h2.widgettitle{
+	font-size:12px;
+}</pre>
+
+<h4>Search Box</h4>
+<pre>#megaMenu > ul.megaMenu > li > .wpmega-widgetarea > ul > li > form#searchform input[type="text"]{
+	font-size:12px;
+}</pre>
+
+<h3 id="MEGA-FAQ-style-on-login">UberMenu is unstyled on the login/registration page.  How can I fix this?</h3>
+
+<p>Normally with WordPress, the login page isn't styled, so UberMenu's CSS and JS aren't loaded there in order to avoid conflicts that arise when only the login styles are loaded.  If you are using a custom template on the registration or login pages, you can load the UberMenu styles by changing line 38 of wp-uber-menu.php from:
+
+<pre><code>if(!is_admin() && !in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ))){</code></pre>
+
+<p>to:</p>
+
+<pre><code>if(!is_admin()){</code></pre>
+
+
+
+<h3 id="MEGA-FAQ-full-width-submenus">How can I make my submenus full width?</h3>
+
+<p>If you want to force all submenus to be full-width, you can add this code:
+<pre><code>#megaMenu ul.megaMenu > li.ss-nav-menu-mega{
+	position:static;
+}
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1{
+    min-width:0;
+    width:938px !important; /* Full width - 22px */
+    left:-1px !important; /* If your menu bar has a left border */
+}</code></pre>
+
+<p>If you want to make a specific submenu full-width, you just need to use the parent item's ID, like this:</p>
+
+<pre><code>#megaMenu ul #menu-item-48 > ul.sub-menu-1{
+    width:938px !important; /* Full width - 22px */
+    left:-1px !important; /* If your menu bar has a left border */
+}</pre></code>
+
+<p>Where <code>menu-item-48</code> is the ID of the top level menu item</p>
+
+
+
+<h3>How much wood would a woodchuck chuck if a woodchuck chuck if a woodchuck could chuck would?</h3>
+<p>A woodchuck would chuck all the wood a woodchuck could if a woodchuck could chuck wood.</p>
+
+
+<!-- 
+
+
+
+THEME SPECIFIC IMPLEMENTATIONS
+
+
+
+-->
+
+<h2 id="theme-specific">Theme-Specific Implementations</h2>
+
+<h3 id="theme-mingle">Mingle</h3>
+
+<p>Mingle is an awesome theme, but integrating it with UberMenu is a little tricky.  Here are some guidelines for the changes you'll need to make:</p>
+
+<p>1. First, Mingle's menu javascript throws an error if the default menu doesn't exist.  To solve this problem, we need to comment out the call to <code>ddsmoothmenu()</code> 
+for the left menu in <code>footer.php</code> around line 51</p>
+
+<pre><code>//if ($theHeader['menu_left']) { echo 'ddsmoothmenu.init({ mainmenuid: "MM", 
+      orientation: "h", classname: "slideMenu", contentsource: "markup" });'; }</code></pre>
+
+<p>2. To remove Mingle's styling from the menu, you'll need to change the class name of the left menu (.slideMenu) around line 50 of <code>design-header.php</code></p>
+
+<pre><code>//From:
+&lt;?php if ($theHeader['menu_left']) { ?&gt;
+	&lt;div id="MM" class="<strong>slideMenu</strong>"&gt;
+
+//To:
+&lt;?php if ($theHeader['menu_left']) { ?&gt;
+	&lt;div id="MM" class="<strong>uberslideMenu</strong>"&gt;
+</code></pre>
+
+<p>3. Now things are working as they should, you'll just need to restyle a bit (see <a href="http://wpmegamenu.com/help/#MEGA-custom-styles-css">Creating Your Own Styles - Via CSS</a>).  You'll likely want to reduce the padding on the top level menu items to make it fit, and maybe make the background of the menu bar transparent.  Here is some code to get you started:</p>
+
+<pre><code>#megaMenu ul.megaMenu > li > a {
+  padding:7px 10px;
+}
+#megaMenu ul.megaMenu{
+  background:none;
+  border:none;
+}</code></pre>
+
+<p>Remember, the width of the submenus is limited to the width of the top level nav bar, so if you want to increase it you can adjust the size like this:</p>
+
+<pre><code>#megaMenu{
+  width:500px;
+}</code></pre>
+
+<p>4. Keep in mind that Mingle uses two menus, while UberMenu can only be used once per page.  If you'd like to use UberMenu styles for "both" menus, I would recommend removing the second menu, 
+using a single UberMenu, setting it to 100% width, and position some of the menu items to the right via CSS (the customization details are beyond the scope of this help file).  </p>
+
+
+<h3 id="theme-genesis">Genesis</h3>
+
+<p>As there are many Genesis child themes, this solution may vary among them.  However, this technique is known to work with the default Genesis theme as of version 1.7.  Similar strategies should work with alternate child themes, though specifics may vary with your child theme.</p>
+
+<p>There are two issues when integrating with Genesis:</p>
+
+<ol>
+<li>The submenus may be hidden.  This is due to an <code>overflow:hidden;</code> on the <code>#nav</code> div</li>
+<li>The submenus will not be styled properly out of the box.  This is due to residual styling.</li>
+</ol>
+
+<p>Both issues are resolved easily by changing the ID of the <code>#nav</code> div or removing the container entirely.  Of course, we don't want to edit the Genesis core directly, so we just use the Genesis filter system to update the menu display:</p>
+
+<pre><code>/* Child Theme's functions.php */
+add_filter( 'genesis_do_nav', 'genesis_child_nav', 10, 3 );
+function genesis_child_nav($nav_output, $nav, $args){
+	return $nav;
+}
+</code></pre>
+
+<p>To accomplish the same thing with the submenu instead, you just need to change the filter:</p>
+
+<pre><code>add_filter( 'genesis_do_subnav', 'genesis_child_nav', 10, 3 );
+function genesis_child_nav($nav_output, $nav, $args){
+	return $nav;
+}
+</code></pre>
+
+<p>You may also wish to add an explicit height to the menu in order to improve the layout:</p>
+
+<pre><code>#megaMenu{
+  height: 46px;
+}</code></pre>
+
+<p>That's it!</p>
+
+<h3 id="theme-karma">Karma</h3>
+
+<p>UberMenu integrates well with Karma except when it comes to templates with additional menus.  If you use a template like <code>Left Nav + Sidebar</code>, you'll find that both the header nav menu and the sidebar nav menu become UberMenus.</p>
+
+<p>The issue arises because Karma defines both menus as the same menu theme location.  That is, both the menu in the header and the menu in the sidebar are defined as "Primary Navigation" by Karma.  As a result, there is no distinction to be made between the two menus (they are really the same menu, printed twice), so you end up with two UberMenus.</p>
+
+<pre><code>/* Karma/header.php line 53 */
+wp_nav_menu( array(
+ 'container' =>false,
+ <strong>'theme_location' => 'Primary Navigation',</strong>
+ 'sort_column' => 'menu_order',
+ 'menu_class' => '',
+ 'echo' => true,
+ 'before' => '',
+ 'after' => '',
+ 'link_before' => '',
+ 'link_after' => '',
+ 'depth' => 0,
+ 'walker' => new description_walker())
+ );
+}
+
+/****************************************************/
+
+/* Sidebar - Karma/functions/global/subnav-left.php line 2*/
+$menu_code = wp_nav_menu( array(
+ 'container' =>false,
+ <strong>'theme_location' => 'Primary Navigation',</strong>
+ 'sort_column' => 'menu_order',
+ 'menu_class' => '',
+ 'echo' => false,
+ 'before' => '',
+ 'after' => '',
+ 'link_before' => '',
+ 'link_after' => '',
+ 'depth' => 0,
+ 'walker' => new sub_nav_walker())
+ );
+</code></pre>
+
+<p>The solution is to define a menu theme location for each real menu location within the templates (header, nav, etc).  Really, we just want to make sure that the header menu is an UberMenu and nothing else.  So the simplest solution is to use UberMenu Easy Integration for the header menu.  This will automatically define a new theme location called "UberMenu".  Switch it on in <em>Appearance > UberMenu > Theme Integration > Easy Integration</em>, then add the appropriate code:</p>
+
+<pre><code>/* Replace the entire wp_nav_menu() call in header.php line 53 with uberMenu_easyIntegrate() */
+
+/* Comment this out: */
+/*wp_nav_menu( array(
+ 'container' =>false,
+ 'theme_location' => 'Primary Navigation',
+ 'sort_column' => 'menu_order',
+ 'menu_class' => '',
+ 'echo' => true,
+ 'before' => '',
+ 'after' => '',
+ 'link_before' => '',
+ 'link_after' => '',
+ 'depth' => 0,
+ 'walker' => new description_walker())
+ );*/
+
+/* Add this: */
+<strong>uberMenu_easyIntegrate();</strong>
+
+</code></pre>
+
+<p>Once you've done that, just go to <em>Appearance > Menus</em> and set the appropriate menu for the <strong>UberMenu</strong> location, and activate that location (deactivate the others).  You can set whatever menu you want for the <strong>Primary Navigation</strong> location, which will now be used for things like sidebars (you can use the same menu here, it'll just be printed normally rather than as an UberMenu.</p>
+
+<p>So now, 
+<ul>
+<li><strong>UberMenu</strong> (location) = header menu</li>
+<li><strong>Primary Navigation</strong> = other menus</li>
+</ul>
+<p>
+
+<h3 id="MEGA-FAQ-headwayintegration">How to integrate UberMenu with Headway theme (prior to Headway 2.0.11)</h3>
+
+<blockquote><strong>Update:</strong> <s>As of Headway version 2.0.11 (June 6, 2011), I am informed that Headway now uses the standard WordPress Menu System, so it should now be much easier to integrate! I will leave these instructions here for anyone using Headway &lt; 2.0.11</s> &larr;  I have received conflicting reports regarding current compatibility, so I am reverting this to "not supported out of the box". If you don't see the Theme Locations box pictured above in your Appearance > Menus screen, you'll need to follow the Headway integration instructions.</blockquote>
+
+
+<p>Note: if you're only using one menu on your site, UberMenu should work without the need for these steps</p>
+
+<p>Headway does not implement WP3 Menus using Theme Locations, so it won't work with UberMenu out of the box if you want to use multiple menus on your site (it doesn't pass the <a href="#MEGA-wp3-compat">compatibility test</a>).  To get UberMenu integrated with Headway without changing any core Headway code, follow these steps:</p>
+
+<ol>
+<li><strong>Activate UberMenu Easy Integration</strong> via <em>Appearance &gt; UberMenu &gt; Theme Integration &gt; Easy Integration</em></li>
+<li><strong>Activate Strict Mode</strong> via <em>Appearance &gt; UberMenu &gt; Theme Integration &gt; Strict Mode</em></li>
+<li><strong>Select your desired menu under UberMenu in the Theme Locations meta box</strong> on the <em>Appearance &gt; Menus</em> page. <br/>
+This is the trickiest step, because Headaway actually hides the Theme Locations box.  So we need to unhide it by either:
+<ul>
+   <li><strong>Using Firebug or Chrome Developer Tools.</strong> <br/>
+	Locate and select the <code>#nav-menu-theme-locations</code> div, (below the <em>Activate UberMenu Locations</em> meta box).  Disable the <code>display:none;</code>, which will make the <em>Theme Locations</em> box appear. <br/>
+   <a href="http://i.imgur.com/080d3.png" target="_blank"><img src="http://i.imgur.com/080d3.png" width="450px" alt="Headway Theme - Showing the Theme Locations Box" title="Headway Theme - Showing the Theme Locations Box" /></a>
+   </li>
+   <li><strong>Editing the CSS</strong><br/>
+     Open your theme's <code>library/admin/css/admin-global.css</code> file and remove line 12: <pre><code>div#nav-menu-theme-locations { display: none; }</code></pre>
+   </li>
+</ul>
+Either of these will display the Theme Locations meta box.  Select your menu from the dropdown and click <em>Save</em>.
+</li>
+<li><strong>Activate the UberMenu Theme Location</strong> by checking the <em>Uber Menu</em> checkbox in the <em>Activate Uber Menu Locations</em> meta box and clicking <em>Save</em></li>
+<li><strong>Hide the default Headway menu</strong> by clicking the checkbox in the Navigation box of the visual editor.
+<a href="http://i.imgur.com/OzGhH.png" target="_blank"><img src="http://i.imgur.com/OzGhH.png" title="Headway - Hide Navigation" alt="Headway - Hide Navigation"/></a>
+</li>
+<li><strong>Add the uberMenu_easyIntegrate() code to an Easy Hook in Header &gt; After Tagline</strong> <br/>
+<a href="http://i.imgur.com/i7h30.png" target="_blank"><img width="450px" src="http://i.imgur.com/i7h30.png" alt="Headway - Easy Hook" title="Headway - Easy Hook" /></a>
+</li>
+<li>You may want to <a href="#MEGA-FAQ-menu-right">align your menu to the right</a>
+</ol>
+
+<p>UberMenu should now be properly integrated with Headway</p>
+
+
+
+<h3 id="theme-Redux">Redux by Orman Clark</h3>
+
+<p>Redux is great, it just requires some residual styling removal</p>
+
+<ol>
+<li>Open the theme's header.php.  Locate this line: <pre><code>&lt;!-- BEGIN #primary-nav --&gt;</code></pre></li>
+<li>In the line below, change the ID of the <code>#primary-nav</code> div to <code>uber-nav</code>, so you have this:
+<pre><code>&lt;div id="uber-nav"&gt;</code></pre>
+</li>
+<li>This removes the residual styling.</li>
+<li>By default, the menu will be full width and sit below the site title.  If you would like the menu to appear in the original 
+theme menu's location, add this code:
+<pre><code>#uber-nav {
+	margin-bottom: 40px;
+	float: right;
+	margin-right: -10px;
+}
+</code></pre>
+</li>
+</ol>
+
+
+<h3 id="theme-Builder">iThemes Builder</h3>
+
+<ol>
+<li>Activate <strong>Strict Mode</strong> in <em>Appearance &gt; UberMenu &gt; Theme Integration</em></li>
+<li>Activate <strong>UberMenu Easy Integration</strong> in <em>Appearance &gt; UberMenu &gt; Theme Integration</em></li>
+<li>Add a new HTML module in Builder, placing it where you want your menu to appear.</li>
+<li>Enter the Easy Integration shortcode in your module:
+<pre><code>[uberMenu_easyIntegrate]</code></pre></li>
+<li>Save the HTML module</li>
+<li>Builder tends to wrap code in containers that set overflow:hidden.  If your submenus are hidden once you set up your menu, you’ll need to apply overflow:visible !important to the container.  For example:
+
+<pre><code>#builder-module-##### div.builder-module-block-outer-wrapper{
+  overflow:visisble !important;
+}</code></pre>
+
+where #### is the ID of your module.</li>
+
+</ol>
+
+
+<br/>
+<br/>
+
+<h3 id="fixes">Fixes</h3>
+
+<h4 id="js-admin-loading">Prevent superfluous UberMenu JS from loading in admin area</h4>
+
+<blockquote>IMPORTANT: This has been resolved as of UberMenu 1.1.3</blockquote>
+
+<p>This can cause an error on the registration page, and can cause some potential conflicts in the back end.  This enhancement will be 
+applied to the next version of UberMenu</p>
+
+<ol>
+<li>In <code>wp-uber-menu.php</code>, in the <code>wpmega_init()</code> function, wrap the actions and javascript calls like this (about line 38):<br/>
+<pre><code>if(!is_admin() && !in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ))){
+	//Actions
+	add_action('wp_print_styles', 'wpmega_load_css');
+	add_action('wp_head', 'wpmega_insert_css', 100);			
+	add_action('wp_head', 'wpmega_inline', 101);
+
+	if($settings['wpmega-iefix'] != 'off') add_action('wp_head', 'wpmega_iefix');
+
+	//Load Javascript unless disabled
+	if($settings['wpmega-jquery'] != 'off') add_action('init', 'wpmega_load_js', 500);	
+}</code></pre>
+</li>
+<li>In <code>wp-uber-menu-admin.php</code>, in the <code>wpmega_admin_init()</code> function, change (about line 24):</br>
+<pre><code>add_action('admin_menu', 'wpmega_admin_load_css');
+add_action('admin_menu', 'wpmega_admin_load_js');</code></pre>
+to
+<pre><code>add_action('admin_print_styles-nav-menus.php', 'wpmega_admin_load_js');
+add_action('admin_print_styles-nav-menus.php', 'wpmega_admin_load_css');
+add_action('admin_print_styles-appearance_page_wp-mega-menu', 'wpmega_admin_load_css');
+add_action('admin_print_styles-appearance_page_wp-mega-menu', 'wpmega_admin_load_js');
+</code></pre>
+</li>
+<li>In <code>wp-uber-menu-admin.php</code>, change the <code>wpmega_admin_load_js()</code> function to:
+
+<pre><code>function wpmega_admin_load_js(){
+
+	$tmp = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
+	
+	//Client Side Stuff
+	wp_enqueue_script('jquery');	// Load jQuery
+	wp_enqueue_script('wpubermenu', $tmp.'js/wpmegamenu.dev.js', array(), false, true);
+	wp_enqueue_script('hoverintent', $tmp.'js/hoverIntent.js', array(), false, true);
+	wp_enqueue_script('thickbox');				
+	
+	//Admin Extras	
+	wp_enqueue_script('wpmega-admin-js', $tmp.'js/wpmegamenu_admin.js', array(), false, true);	
+	wp_enqueue_script('colorpicker-js', $tmp.'js/colorpicker/js/colorpicker.js', array(), false, true);
+	
+	add_action('admin_head', 'wpmega_inline', 101);
+}</code></pre>		
+
+</li>
+
+</ol>
+
+</div>
+</body>
+</html>

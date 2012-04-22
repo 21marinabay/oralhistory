@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<wp_test_option_tree>
+  <row>
+    <id>1</id>
+    <item_id>general_default</item_id>
+    <item_title>Basic Settings</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>1</item_sort>
+  </row>
+  <row>
+    <id>2</id>
+    <item_id>logo</item_id>
+    <item_title>Upload Your Logo</item_title>
+    <item_desc>Upload your logo image (JPG, GIF, PNG). Keep in mind that this won&amp;#039;t scale, so you may need to resize it to fit the template. Default size is 260 x 60px.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>2</item_sort>
+  </row>
+  <row>
+    <id>3</id>
+    <item_id>favicon</item_id>
+    <item_title>Upload Your Browser Icon</item_title>
+    <item_desc>Upload the 16x16px image (GIF) that you&amp;#039;d like to show up in the browser address bar.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>3</item_sort>
+  </row>
+  <row>
+    <id>4</id>
+    <item_id>default_bg</item_id>
+    <item_title>Upload Your Background Image</item_title>
+    <item_desc>Optional: Upload an image that you&amp;#039;d like to use as the default background. This will be centered at the top and repeated along the X and Y axis, so it can either be a pattern or a large graphic. Note: You can override this image using the &amp;quot;custom field&amp;quot; for background images inside posts and pages.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>4</item_sort>
+  </row>
+  <row>
+    <id>5</id>
+    <item_id>chosen</item_id>
+    <item_title>Use the Chosen Dropdown Replacement Script?</item_title>
+    <item_desc>Selecting Yes will tell the theme to use the Chosen dropdown menu script to be used for the main navigation area when the screen area is small. It&amp;#039;s pretty, but can be a hassle on some devices when you have lots (over 10) menu items. Selecting NO will tell the theme to use the default device UI for the dropdown. Keep in mind there are 2 unique menu areas now as of 1.03 - one for the main navigation - one for the small dropdown version. Visit the Appearance &amp;gt; Menus page to assign a menu to each version.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>5</item_sort>
+  </row>
+  <row>
+    <id>6</id>
+    <item_id>styling</item_id>
+    <item_title>Styling Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>6</item_sort>
+  </row>
+  <row>
+    <id>7</id>
+    <item_id>default_skin</item_id>
+    <item_title>Default Skin</item_title>
+    <item_desc>Pick the default starter skin that you want to use. Note: You can change the CSS for any of these from inside the /assets/stylesheets/skin-xxxx.css files. You can also manually enter your own custom CSS rules below.</item_desc>
+    <item_type>select</item_type>
+    <item_options>Classic,Clean,Dark</item_options>
+    <item_sort>7</item_sort>
+  </row>
+  <row>
+    <id>8</id>
+    <item_id>tags_color</item_id>
+    <item_title>Tags Color</item_title>
+    <item_desc>Select which color you&amp;#039;d like to be used for the tags &amp;quot;button&amp;quot; effect. You can always override this with basic css - check the &amp;quot;buttons.css&amp;quot; file for the styling code.</item_desc>
+    <item_type>select</item_type>
+    <item_options>Yellow, Red, Purple, Blue, Green, Black, Gray</item_options>
+    <item_sort>8</item_sort>
+  </row>
+  <row>
+    <id>9</id>
+    <item_id>default_fontstack</item_id>
+    <item_title>Default Fontstack</item_title>
+    <item_desc>Select the default font stack that you&amp;#039;d like used on the site.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Sans-Serif,Serif</item_options>
+    <item_sort>9</item_sort>
+  </row>
+  <row>
+    <id>10</id>
+    <item_id>fontreplace</item_id>
+    <item_title>Set the Headline Typeface</item_title>
+    <item_desc>Pick one of the pre-packaged fonts that you&amp;#039;d like to use to replace the headlines across the theme. Additional fonts can be loaded below.</item_desc>
+    <item_type>select</item_type>
+    <item_options>,///GoogleFonts///,Abril+Fatface,Arvo,Cabin,Droid+Sans,Hammersmith+One,Lato,Ovo,Pacifico,Playfair+Display,Rokkitt,Rosario,Tienne,Ubuntu,UnifrakturMaguntia,Vollkorn, ,No-Font-Replacement</item_options>
+    <item_sort>10</item_sort>
+  </row>
+  <row>
+    <id>11</id>
+    <item_id>alt_fontreplace</item_id>
+    <item_title>Alternative Font Replacement</item_title>
+    <item_desc>Have your own font-replacement &amp;quot;embed code&amp;quot; already from a service like TypeKit? Go ahead and enter it right here. NOTE: This will disable all other font replacement if there&amp;#039;s anything at all entered into this field. This is an experimental tool at the moment, so if it doesn&amp;#039;t work perfectly with your own font service, you&amp;#039;ll have to use the default options above or insert yours via the header.php file.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>12</item_options>
+    <item_sort>11</item_sort>
+  </row>
+  <row>
+    <id>12</id>
+    <item_id>link_color</item_id>
+    <item_title>Link Color</item_title>
+    <item_desc>Pick the color that you&amp;#039;d like all links to appear as by default.</item_desc>
+    <item_type>colorpicker</item_type>
+    <item_options></item_options>
+    <item_sort>12</item_sort>
+  </row>
+  <row>
+    <id>13</id>
+    <item_id>link_hover_color</item_id>
+    <item_title>Link Hover Color</item_title>
+    <item_desc>Select the color that you&amp;#039;d like your links to appear as when hovered over by a mouse.</item_desc>
+    <item_type>colorpicker</item_type>
+    <item_options></item_options>
+    <item_sort>13</item_sort>
+  </row>
+  <row>
+    <id>14</id>
+    <item_id>link_visited_color</item_id>
+    <item_title>Link Visited Color</item_title>
+    <item_desc>Select the color that you&amp;#039;d like links to appear as AFTER a user has visited them. Likely a slight variation of the default link color.</item_desc>
+    <item_type>colorpicker</item_type>
+    <item_options></item_options>
+    <item_sort>14</item_sort>
+  </row>
+  <row>
+    <id>15</id>
+    <item_id>customcss</item_id>
+    <item_title>Custom CSS</item_title>
+    <item_desc>You can enter custom style rules into this box if you&amp;#039;d like. IE: &amp;lt;i&amp;gt;a{color: red !important;}&amp;lt;/i&amp;gt;&amp;lt;br /&amp;gt;
+					This is an advanced option! This is not recommended for users not fluent in CSS... but if you do know CSS, anything you add here will override the default styles.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>10</item_options>
+    <item_sort>15</item_sort>
+  </row>
+  <row>
+    <id>16</id>
+    <item_id>image_settings</item_id>
+    <item_title>Image &amp;amp; Thumbnail Settings</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>16</item_sort>
+  </row>
+  <row>
+    <id>17</id>
+    <item_id>open_as_lightbox</item_id>
+    <item_title>Open Thumbnails Inside a Lightbox?</item_title>
+    <item_desc>Selecting &amp;quot;Yes&amp;quot; will make thumbnails across the theme (including the homepage thumbnails) open the fullsize featured-image inside a lightbox. For homepage blurb images, this means the image URL. For blog posts, this can also be your &amp;quot;lightbox link&amp;quot; custom field (which can be a video URL!). /// Selecting &amp;quot;No&amp;quot; will make the thumbnails all link to their full post (inside a normal post template), or in the case of the homepage blurb images, link to their destination URL.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>17</item_sort>
+  </row>
+  <row>
+    <id>18</id>
+    <item_id>show_featured_image</item_id>
+    <item_title>Auto-Insert Full Post Images?</item_title>
+    <item_desc>Sometimes it&amp;#039;s a hassle to manually insert an image at the top of each blog post or page... this option allows you to simply set the &amp;quot;Featured Image&amp;quot; and the theme will add that image to the top of your blog posts, everytime. It&amp;#039;s also fully responsive, so you won&amp;#039;t need to worry about sizing so long as your featured image is above roughly 640px wide.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>18</item_sort>
+  </row>
+  <row>
+    <id>19</id>
+    <item_id>sencha</item_id>
+    <item_title>Use Sencha.io for Images?</item_title>
+    <item_desc>Sencha.io Src sizes your images to the device that is requesting them, then caches and optimizes them for efficient repeat delivery. This is only used in a handful of spots in this theme, but can help image-heavy pages like full blog listings in mobile environments.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>19</item_sort>
+  </row>
+  <row>
+    <id>20</id>
+    <item_id>header</item_id>
+    <item_title>Header Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>20</item_sort>
+  </row>
+  <row>
+    <id>21</id>
+    <item_id>top_hat</item_id>
+    <item_title>Show Top Hat?</item_title>
+    <item_desc>Turn the top hat row on and off.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>21</item_sort>
+  </row>
+  <row>
+    <id>22</id>
+    <item_id>email_subscribe</item_id>
+    <item_title>Email Subscription Link</item_title>
+    <item_desc>If you have a Feedburner Email Subscription URL (or any other email subscription link), enter it here.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>22</item_sort>
+  </row>
+  <row>
+    <id>23</id>
+    <item_id>top_hat_blurb</item_id>
+    <item_title>Top Hat Right-side Blurb</item_title>
+    <item_desc>Enter some text that you&amp;#039;d like used for the top-hat&amp;#039;s right-side blurb.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>23</item_sort>
+  </row>
+  <row>
+    <id>24</id>
+    <item_id>header_promo</item_id>
+    <item_title>Header Promotional Space</item_title>
+    <item_desc>Upload an image (468x60px) that you&amp;#039;d like to use for the header &amp;quot;promotional space&amp;quot;. Perfect for advertisements, or for promoting your own personal projects or pages. If you leave this blank, the space will be blank as well.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>24</item_sort>
+  </row>
+  <row>
+    <id>25</id>
+    <item_id>header_promo_url</item_id>
+    <item_title>Header Promotional Space URL</item_title>
+    <item_desc>If you&amp;#039;ve uploaded an image for the promo space, you can also enter a destination URL here for where you&amp;#039;d like the image to link to. ie: http://yourwebsite.com</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>25</item_sort>
+  </row>
+  <row>
+    <id>26</id>
+    <item_id>logo_center</item_id>
+    <item_title>Center the Logo? (removes promo-space at the same time)</item_title>
+    <item_desc>This will override the header-promo space by removing that ad-space altogether and auto-centering your logo across the header.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>26</item_sort>
+  </row>
+  <row>
+    <id>27</id>
+    <item_id>frontpage</item_id>
+    <item_title>Front Page Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>27</item_sort>
+  </row>
+  <row>
+    <id>28</id>
+    <item_id>frontpage_slider</item_id>
+    <item_title>Show Front-Page Slider?</item_title>
+    <item_desc>Show the homepage slider? Selecting &amp;quot;No&amp;quot; will hide it, even if you have slides set below.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>28</item_sort>
+  </row>
+  <row>
+    <id>29</id>
+    <item_id>homepage_slider</item_id>
+    <item_title>Front Page Slider</item_title>
+    <item_desc>Upload images that you&amp;#039;d like to be used as slides on the default homepage layout, as well as a simple destination URL for when visitors click each slide. 
+
+Note: The demo uses images sized at 940x392px, but the theme will automatically resize any oversized images to fit the space. Images should all be roughly the same height, and images that are too small will not be scaled &amp;quot;up&amp;quot; to fit the space.</item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>29</item_sort>
+  </row>
+  <row>
+    <id>30</id>
+    <item_id>frontpage_blurbrow</item_id>
+    <item_title>Show Front-Page Blurb Row?</item_title>
+    <item_desc>Selecting &amp;quot;Yes&amp;quot; will enable the front-page &amp;quot;Blurb&amp;quot; row, which consists of three columns (image, title, text and a URL). Options for this section are below.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>31</item_sort>
+  </row>
+  <row>
+    <id>31</id>
+    <item_id>homepage_blurb_1_title</item_id>
+    <item_title>Blurb 1: Title</item_title>
+    <item_desc>Enter the title for the first homepage blurb.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>32</item_sort>
+  </row>
+  <row>
+    <id>32</id>
+    <item_id>homepage_blurb_1_image</item_id>
+    <item_title>Blurb 1: Image</item_title>
+    <item_desc>Enter the image that you&amp;#039;d like to use for the first Homepage Blurb.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>33</item_sort>
+  </row>
+  <row>
+    <id>33</id>
+    <item_id>homepage_blurb_1_url</item_id>
+    <item_title>Blurb 1: URL</item_title>
+    <item_desc>Enter the URL that you&amp;#039;d like the first homepage blurb to link to.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>34</item_sort>
+  </row>
+  <row>
+    <id>34</id>
+    <item_id>homepage_blurb_1_text</item_id>
+    <item_title>Blurb 1: Descriptive Text</item_title>
+    <item_desc>Enter the descriptive text for the first homepage blurb.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>35</item_sort>
+  </row>
+  <row>
+    <id>35</id>
+    <item_id>homepage_blurb_2_title</item_id>
+    <item_title>Blurb 2: Title</item_title>
+    <item_desc>Enter the title for the second homepage blurb.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>36</item_sort>
+  </row>
+  <row>
+    <id>36</id>
+    <item_id>homepage_blurb_2_image</item_id>
+    <item_title>Blurb 2: Image</item_title>
+    <item_desc>Enter the image that you&amp;#039;d like to use for the second Homepage Blurb.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>37</item_sort>
+  </row>
+  <row>
+    <id>37</id>
+    <item_id>homepage_blurb_2_url</item_id>
+    <item_title>Blurb 2: URL</item_title>
+    <item_desc>Enter the URL that you&amp;#039;d like the second homepage blurb to link to.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>38</item_sort>
+  </row>
+  <row>
+    <id>38</id>
+    <item_id>homepage_blurb_2_text</item_id>
+    <item_title>Blurb 2: Descriptive Text</item_title>
+    <item_desc>Enter the descriptive text for the second homepage blurb.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>39</item_sort>
+  </row>
+  <row>
+    <id>39</id>
+    <item_id>homepage_blurb_3_title</item_id>
+    <item_title>Blurb 3: Title</item_title>
+    <item_desc>Enter the title for the third homepage blurb.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>40</item_sort>
+  </row>
+  <row>
+    <id>40</id>
+    <item_id>homepage_blurb_3_image</item_id>
+    <item_title>Blurb 3: Image</item_title>
+    <item_desc>Enter the image that you&amp;#039;d like to use for the third Homepage Blurb.</item_desc>
+    <item_type>upload</item_type>
+    <item_options></item_options>
+    <item_sort>41</item_sort>
+  </row>
+  <row>
+    <id>41</id>
+    <item_id>homepage_blurb_3_url</item_id>
+    <item_title>Blurb 3: URL</item_title>
+    <item_desc>Enter the URL that you&amp;#039;d like the third homepage blurb to link to.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>42</item_sort>
+  </row>
+  <row>
+    <id>42</id>
+    <item_id>homepage_blurb_3_text</item_id>
+    <item_title>Blurb 3: Descriptive Text</item_title>
+    <item_desc>Enter the descriptive text for the third homepage blurb.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>43</item_sort>
+  </row>
+  <row>
+    <id>43</id>
+    <item_id>social</item_id>
+    <item_title>Social Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>44</item_sort>
+  </row>
+  <row>
+    <id>44</id>
+    <item_id>header_social</item_id>
+    <item_title>Display Social Icons in the Header?</item_title>
+    <item_desc>Do you want the social icons to show up in the header? Options for each icon are below.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>45</item_sort>
+  </row>
+  <row>
+    <id>45</id>
+    <item_id>footer_social</item_id>
+    <item_title>Display Social Icons in the Footer?</item_title>
+    <item_desc>Selecting &amp;quot;Yes&amp;quot; will repeat the social icons (Facebook, Twitter, etc.) from the header navigation on the right side of the footer.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>46</item_sort>
+  </row>
+  <row>
+    <id>46</id>
+    <item_id>social_twitter</item_id>
+    <item_title>Twitter Link</item_title>
+    <item_desc>Enter your Twitter URL that you&amp;#039;d like to use for all theme-specific social links.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>47</item_sort>
+  </row>
+  <row>
+    <id>47</id>
+    <item_id>social_facebook</item_id>
+    <item_title>Facebook Link</item_title>
+    <item_desc>Enter your Facebook URL that you&amp;#039;d like to use for all theme-specific social links.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>48</item_sort>
+  </row>
+  <row>
+    <id>48</id>
+    <item_id>social_google</item_id>
+    <item_title>Google+ Link</item_title>
+    <item_desc>Enter your Google+ URL that you&amp;#039;d like to use for all theme-specific social links.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>49</item_sort>
+  </row>
+  <row>
+    <id>49</id>
+    <item_id>social_youtube</item_id>
+    <item_title>YouTube Link</item_title>
+    <item_desc>Insert the full URL you&amp;#039;d like used for your YouTube link. Leave empty and the icon won&amp;#039;t show up at all.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>50</item_sort>
+  </row>
+  <row>
+    <id>50</id>
+    <item_id>social_vimeo</item_id>
+    <item_title>Vimeo Link</item_title>
+    <item_desc>Enter your Vimeo URL that you&amp;#039;d like to use for all theme-specific social links.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>51</item_sort>
+  </row>
+  <row>
+    <id>51</id>
+    <item_id>social_linkedin</item_id>
+    <item_title>Linked-In Link</item_title>
+    <item_desc>Enter your LinkedIn URL that you&amp;#039;d like to use for all theme-specific social links.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>52</item_sort>
+  </row>
+  <row>
+    <id>52</id>
+    <item_id>breakout</item_id>
+    <item_title>Blog Breakout Row</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>53</item_sort>
+  </row>
+  <row>
+    <id>53</id>
+    <item_id>homepage_breakout_section</item_id>
+    <item_title>Show &amp;quot;From the Blog&amp;quot; Row?</item_title>
+    <item_desc>Select &amp;quot;Yes&amp;quot; to show a row of posts just above the footer widgets section. You can setup custom options for it below (only necessary if you pick Yes, naturally!). Note: If you select &amp;quot;Yes&amp;quot;, you can always disable this on individual Posts/Pages from the Post/Page Options box.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>54</item_sort>
+  </row>
+  <row>
+    <id>54</id>
+    <item_id>homepage_breakout_title</item_id>
+    <item_title>From The Blog : Header</item_title>
+    <item_desc>The title for the From the Blog row (shown on the left side of the row).</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>55</item_sort>
+  </row>
+  <row>
+    <id>55</id>
+    <item_id>homepage_breakout_text</item_id>
+    <item_title>Descriptive Text</item_title>
+    <item_desc>The text for the From the Blog row (shown on the left side of the row).</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>56</item_sort>
+  </row>
+  <row>
+    <id>56</id>
+    <item_id>homepage_breakout_category</item_id>
+    <item_title>From the Blog : Category Filter</item_title>
+    <item_desc>Pick a category (not mandatory) for the posts that you&amp;#039;d like to show up in this row. If you don&amp;#039;t pick one, it&amp;#039;ll draw from all possible categories in your blog.</item_desc>
+    <item_type>category</item_type>
+    <item_options></item_options>
+    <item_sort>57</item_sort>
+  </row>
+  <row>
+    <id>57</id>
+    <item_id>homepage_breakout_number</item_id>
+    <item_title>From the Blog : Post Count</item_title>
+    <item_desc>Pick how many posts you&amp;#039;d like to show up in this row. Ideally this should be 3 (making one full row), but you can add more or less if you&amp;#039;d like!</item_desc>
+    <item_type>select</item_type>
+    <item_options>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15</item_options>
+    <item_sort>58</item_sort>
+  </row>
+  <row>
+    <id>58</id>
+    <item_id>footer</item_id>
+    <item_title>Footer Options</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>59</item_sort>
+  </row>
+  <row>
+    <id>59</id>
+    <item_id>footer_widgets</item_id>
+    <item_title>Display Footer Widget Space?</item_title>
+    <item_desc>Choose whether or not you&amp;#039;d like the footer widget space to be visible. These 4 widget spaces (sidebars) are controlled from the Appearance &amp;gt; Widgets panel.</item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>60</item_sort>
+  </row>
+  <row>
+    <id>60</id>
+    <item_id>footer_blurb_left</item_id>
+    <item_title>Left-side Footer Blurb</item_title>
+    <item_desc>The text that you&amp;#039;d like to display at the left side of the bottom footer row. IE: Copyright 2012, Your Company.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>61</item_sort>
+  </row>
+  <row>
+    <id>61</id>
+    <item_id>footer_blurb_right</item_id>
+    <item_title>Right-side Footer Blurb</item_title>
+    <item_desc>The text that you&amp;#039;d like to display at the right side of the bottom footer row. IE: Powered by WordPress, Theme by Brandon R Jones.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>62</item_sort>
+  </row>
+</wp_test_option_tree>
