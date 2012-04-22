@@ -20,11 +20,11 @@ endif;
 
 
 <!-- Super Container -->
-<div class="super-container full-width main-content-area portfolio-4" id="section-content" >
+<div class="super-container full-width main-content-area portfolio-4" id="section-content">
 
 
 	<!-- 960 Container -->
-	<div class="container" style="position:static;" >		
+	<div class="container">		
 				
 					
 		<!-- CONTENT -->
@@ -36,7 +36,30 @@ endif;
 			
 			<!-- Filter Navigation -->
 			<div class="sixteen columns portfolio-nav">
-
+				<p class="portfolio-filters" id="portfolio-filter">
+					<span>Filters:</span>					
+					
+					<a class="button" href="#all">All</a>
+					
+					<!-- Grab just the category slugs and list them using our markup -->
+					<?php 
+					 					
+					if(get_post_custom_values('category_filter')) :     // If the category filter exists on this page...
+					
+					$cats = get_post_custom_values('category_filter'); 	// Returns an array of cat-slugs from the custom field.
+					
+					foreach ( $cats as $cat ) {				
+						$catsluglink = '<a class="button" href="#'.$cat.'">'.$cat.'</a> ';  // Create a link using our markup now
+						$acats[] = $catsluglink; 								// Turn the list of ID's into an ARRAY, $acats[]
+					}			
+				    
+					$cat_string = join(' ', $acats);					// Join the ARRAY into a space-separated STRING 
+					echo $cat_string;	
+					endif;							
+			
+					?>
+						
+				</p>
 					
 				<p class="portfolio-view">
 					<span>Layout:</span>
@@ -44,26 +67,23 @@ endif;
 					<span class="hybrid_btn 4-col-hybrid"><img src="<?php echo WP_THEME_URL; ?>/assets/images/theme/btn_hybrid.png" alt="Hybrid View" /></span>
 					<span class="list_btn 4-col-list"><img src="<?php echo WP_THEME_URL; ?>/assets/images/theme/btn_list.png" alt="List View" /></span>
 				</p>
+				<br /><br />
+				<hr class="half-bottom" />
 			</div> 
 			
 			<!-- Portfolio List-->  
 			<div id="portfolio-list" class="content">
 		
 			<!-- CATEGORY QUERY + START OF THE LOOP -->
-			
-			
 			<?php get_template_part( 'element', 'categoryfilterquery' ); ?>
-			
-			
-			
-			
 			<?php while (have_posts()) : the_post(); ?>
-			
+				
+				
+				<!-- THE POST LOOP -->				
+				
 				<!-- ============================================ -->
 			
 				<?php if (has_post_thumbnail( $post->ID )) {
-						
-							//print($post->ID);
 						
 						// Check for Sencha preferences, set the variable if the user wants it.
 						// Unused as of 1.04 for the time being until some bugs get sorted out

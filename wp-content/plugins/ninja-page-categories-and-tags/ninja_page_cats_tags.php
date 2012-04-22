@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Ninja Pages, Categories, and Tags
-Plugin URI: http://plugins.wpninjas.net/?p=72
+Plugin URI: http://wpninjas.net/?p=18
 Description: A simple plugin that allows the user to assign categories and tags to pages.
 Version: 1.2.2
 Author: The WP Ninjas
-Author URI: http://www.wpninjas.net
+Author URI: http://wpninjas.net
 */
 
 /**

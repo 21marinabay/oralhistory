@@ -2,7 +2,8 @@
 <!-- This one's special because it'll look for our category filter and apply some magic -->
 
 			<?php 
-			
+  			print("element-categoryfilterpage");
+	
 			if(get_post_custom_values('post_count')) :  
 				echo "Amol".$post_array = get_post_custom_values('post_count');
 				$post_count = join(',', $post_array);
@@ -10,11 +11,11 @@
 				$post_count = -1;
 			endif;
 			
-		
+	                	
 			if(get_post_custom_values('category_filter')) :     // If the category filter exists on this page...
 				$cats = get_post_custom_values('category_filter'); 	// Returns an array of cat-slugs from the custom field.
 			
-		//	print("Amol-Cats ".$cats);
+			print("Amol-Cats ".$cats);
 			
 				foreach ( $cats as $cat ) {			
 				
@@ -36,7 +37,7 @@
 			$heading = "menu_order";
 			$type = "asc";
 			$args=array(
-				'cat'=>$cat_string,			   // Query for the cat ID's (because you can't use multiple names or slugs... crazy WP!)
+				'cat'=>8,			   // Query for the cat ID's (because you can't use multiple names or slugs... crazy WP!)
 				'posts_per_page'=>$post_count, // Set a posts per page limit
 				'paged'=>$paged,				// Basic pagination stuff.
 				'orderby'=>$heading,
@@ -44,7 +45,7 @@
 				
 			   );
 			query_posts($args);
-			//print_r(array_values(query_posts($args)));
+			print_r(array_values(query_posts($args)));
 			
 		//	<?php //$posts = query_posts( $query_string . '&orderby=title&order=asc' ); 
 			
