@@ -22,7 +22,7 @@ define('DB_NAME', 'super21_oralhistory');
 define('DB_USER', 'super21_wp');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'history');
+define('DB_PASSWORD', 'ferrari1234');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -92,4 +92,3 @@ require_once(ABSPATH . 'wp-settings.php');
 define(’WP_MEMORY_LIMIT’, ‘512M’);
 
 ?>
-

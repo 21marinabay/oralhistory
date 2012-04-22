@@ -1,0 +1,2 @@
+[22-Apr-2012 05:21:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/super21/oralhistory/wp-config.php:96) in /home/super21/oralhistory/wp-includes/pluggable.php on line 866
+[22-Apr-2012 05:24:30 UTC] RRRRpost_type=post&posts_per_page=20
